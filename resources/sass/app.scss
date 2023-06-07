@@ -104,6 +104,14 @@ main {
 // }
 // }
 
+.pt-10 {
+  padding-top: 10rem !important;
+}
+
+.-top-30{
+  top: -30px !important;
+}
+
 #sidebar {
   &.active {
     width: 283px !important;
