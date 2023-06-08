@@ -24,63 +24,66 @@
         <div class="font-size-48 font-weight-700 pt-5">
             About Us
         </div>
-        <div class="row pt-4">
-            <div class="col-md-9">
-                <div class="card border-0"
-                    style="background: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%); border-radius: 30px 0px 0px 30px;">
-                    <div class="card-body">
-                        After being acquired by Salim Group in 2017, PT XL Planet, which was previously known as “elevenia”,
-                        a customer-to-customer (C2C) player in the e-commerce industry, has made a revolutionary switch in
-                        its business strategy by establishing a business-to-business (B2B) services with the new brand of
-                        “elevenia.biz”. The initial idea to build that new business stream was to provide corporations
-                        within the group with a solution-based procurement
-                        process. However, in responding to the demand in the market, elevenia.biz rapidly also serves other
-                        corporations outside the group as its distinguished clients
-                    </div>
+        <div class="d-flex gap-2 pt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/assets/images/espn.png" class="img-fluid" alt="">
                 </div>
-            </div>
-            <div class="col-md-3">
-                <!-- img -->
-                <img src="/assets/images/about-01.png" alt="" width="90%" height="90%" />
-            </div>
-        </div>
-        <div class="row pt-2">
-            <div class="col-md-3">
-                <img src="/assets/images/about-01.png" alt="" width="90%" height="90%" />
-            </div>
-            <div class="col-md-9">
-                <div class="card border-0"
-                    style="background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #D9D9D9 100%); border-radius: 0px 30px 30px 0px;">
-                    <div class="card-body">
-                        After being acquired by Salim Group in 2017, PT XL Planet, which was previously known as “elevenia”,
-                        a customer-to-customer (C2C) player in the e-commerce industry, has made a revolutionary switch in
-                        its business strategy by establishing a business-to-business (B2B) services with the new brand of
-                        “elevenia.biz”. The initial idea to build that new business stream was to provide corporations
-                        within the group with a solution-based procurement
-                        process. However, in responding to the demand in the market, elevenia.biz rapidly also serves other
-                        corporations outside the group as its distinguished clients
+                <div class="col-md-8">
+                    <div class="font-size-16 font-weight-400">
+                        e-Nusantara contributes its significant role in building up the trading ecosystem of Indonesian
+                        commodities (such as spices, herbs, fishery, etc.), including the derivatives as value-added, to
+                        fulfil
+                        customers' demands which they have distinct requirements or standards referring to their business
+                        needs
+                        and even to comply with the regulations in the destination country or region. In parallel,
+                        e-Nusantara
+                        collaborates with any related parties, empowering the individual or group of farmers to ensure the
+                        quality of acquired resources constantly at its best and well-managed.
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row pt-4">
-            <div class="col-md-9">
-                <div class="card border-0"
-                    style="background: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%); border-radius: 30px 0px 0px 30px;">
-                    <div class="card-body">
-                        After being acquired by Salim Group in 2017, PT XL Planet, which was previously known as “elevenia”,
-                        a customer-to-customer (C2C) player in the e-commerce industry, has made a revolutionary switch in
-                        its business strategy by establishing a business-to-business (B2B) services with the new brand of
-                        “elevenia.biz”. The initial idea to build that new business stream was to provide corporations
-                        within the group with a solution-based procurement
-                        process. However, in responding to the demand in the market, elevenia.biz rapidly also serves other
-                        corporations outside the group as its distinguished clients
+
+        <div class="d-flex gap-2 pt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/assets/images/logo-elevenia-1.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="font-size-16 font-weight-400">
+                        e-Nusantara contributes its significant role in building up the trading ecosystem of Indonesian
+                        commodities (such as spices, herbs, fishery, etc.), including the derivatives as value-added, to
+                        fulfil
+                        customers' demands which they have distinct requirements or standards referring to their business
+                        needs
+                        and even to comply with the regulations in the destination country or region. In parallel,
+                        e-Nusantara
+                        collaborates with any related parties, empowering the individual or group of farmers to ensure the
+                        quality of acquired resources constantly at its best and well-managed.
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <!-- img -->
-                <img src="/assets/images/about-01.png" alt="" width="90%" height="90%" />
+        </div>
+
+        <div class="d-flex gap-2 pt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="/assets/images/bg-enusantara.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="font-size-16 font-weight-400">
+                        e-Nusantara contributes its significant role in building up the trading ecosystem of Indonesian
+                        commodities (such as spices, herbs, fishery, etc.), including the derivatives as value-added, to
+                        fulfil
+                        customers' demands which they have distinct requirements or standards referring to their business
+                        needs
+                        and even to comply with the regulations in the destination country or region. In parallel,
+                        e-Nusantara
+                        collaborates with any related parties, empowering the individual or group of farmers to ensure the
+                        quality of acquired resources constantly at its best and well-managed.
+                    </div>
+                </div>
             </div>
         </div>
 

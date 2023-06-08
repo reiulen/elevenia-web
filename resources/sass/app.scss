@@ -1106,3 +1106,13 @@ footer {
     display: inline-block;
     width: 100%;
 }
+
+@media (min-width: 992px) {
+  .px-lg-8 {
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+  }
+  .pb-lg-20 {
+    padding-bottom: 20rem !important;
+  }
+}

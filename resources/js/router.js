@@ -4,6 +4,9 @@ import NotFound from './pages/NotFound.vue';
 import AboutUs from './pages/AboutUs/Index.vue';
 import ProductService from './pages/ProductAndService/Index.vue';
 import News from './pages/News/Index.vue';
+import NewsShow from './pages/News/Show/Index.vue';
+import Career from './pages/Career/Index.vue';
+import ContactUs from './pages/Contact/Index.vue';
 
 const routes = [
     {
@@ -25,6 +28,21 @@ const routes = [
         path: '/news',
         name: 'News',
         component: News
+    },
+    {
+        path: '/news/show',
+        name: 'News Show',
+        component: NewsShow
+    },
+    {
+        path: '/career',
+        name: 'Career',
+        component: Career
+    },
+    {
+        path: '/contact-us',
+        name: 'Contact Us',
+        component: ContactUs
     },
     {
         path: '/:pathMatch(.*)*',
