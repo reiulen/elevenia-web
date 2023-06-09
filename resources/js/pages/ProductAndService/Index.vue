@@ -31,7 +31,7 @@
                     <div class="font-size-14 font-weight-700 pt-2 text-center">
                         Product in catalogue
                     </div>
-                    <div class="d-flex gap-3 pt-3 justify-content-end align-items-center" style="flex-wrap: wrap;">
+                    <div class="d-flex gap-3 pt-3 justify-content-md-start justify-content-center align-items-center" style="flex-wrap: wrap;">
                         <div class="mt-4">
                             <div class="card border-2 border-black radius-2">
                                 <div class="card-body">
@@ -89,7 +89,7 @@
                     <div class="font-size-14 font-weight-700 pt-2 text-center">
                         Product in catalogue
                     </div>
-                    <div class="d-flex gap-3 pt-3 align-items-center" style="flex-wrap: wrap;">
+                    <div class="d-flex gap-3 pt-3 justify-content-md-start justify-content-center align-items-center" style="flex-wrap: wrap;">
                         <div class="mt-4">
                             <div class="card border-2 border-black radius-2">
                                 <div class="card-body">

@@ -33,44 +33,50 @@
                     </div>
                 </div>
             </div>
-            <div class="card border-0 bg-p-orange-9 mt-2" v-if="isCollapsed">
-                <div class="card-body">
-                    <div class="d-flex justify-content-center">
-                        <span class="badge rounded-pill bg-p-green-17 px-5 py-2" style="border: 5px solid white">
-                            Role and Responsibility
-                        </span>
+            <div v-if="isCollapsed">
+                <div class="card border-0 bg-p-orange-9 mt-2">
 
-                    </div>
-                    <div class="font-size-18\5 font-weight-600 pt-4">
-                        <!-- create list 1, 2, 3 for role and resposibility -->
-                        <ol>
-                            <li>Responsible for the sales and marketing of the company’s products in the export market.</li>
-                            <li>Develop and implement sales and marketing strategies to achieve sales target.</li>
-                            <li>Develop and maintain good rapport with existing and potential customers.</li>
-                            <li>Provide market feedback to the management.</li>
-                            <li>Prepare sales reports and forecasts.</li>
-                            <li>Perform any other duties as assigned by the management.</li>
-                        </ol>
-                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-center">
+                            <span class="badge rounded-pill bg-p-green-17 px-5 py-2" style="border: 5px solid white">
+                                Role and Responsibility
+                            </span>
 
-                    <div class="d-flex justify-content-center pt-4">
-                        <span class="badge rounded-pill bg-p-green-17 px-5 py-2" style="border: 5px solid white">
-                            Requirement
-                        </span>
+                        </div>
+                        <div class="font-size-18\5 font-weight-600 pt-4">
+                            <!-- create list 1, 2, 3 for role and resposibility -->
+                            <ol>
+                                <li>Responsible for the sales and marketing of the company’s products in the export market.
+                                </li>
+                                <li>Develop and implement sales and marketing strategies to achieve sales target.</li>
+                                <li>Develop and maintain good rapport with existing and potential customers.</li>
+                                <li>Provide market feedback to the management.</li>
+                                <li>Prepare sales reports and forecasts.</li>
+                                <li>Perform any other duties as assigned by the management.</li>
+                            </ol>
+                        </div>
 
-                    </div>
-                    <div class="font-size-18\5 font-weight-600 pt-4">
-                        <!-- create list 1, 2, 3 for role and resposibility -->
-                        <ol>
-                            <li>Responsible for the sales and marketing of the company’s products in the export market.</li>
-                            <li>Develop and implement sales and marketing strategies to achieve sales target.</li>
-                            <li>Develop and maintain good rapport with existing and potential customers.</li>
-                            <li>Provide market feedback to the management.</li>
-                            <li>Prepare sales reports and forecasts.</li>
-                            <li>Perform any other duties as assigned by the management.</li>
-                        </ol>
+                        <div class="d-flex justify-content-center pt-4">
+                            <span class="badge rounded-pill bg-p-green-17 px-5 py-2" style="border: 5px solid white">
+                                Requirement
+                            </span>
+
+                        </div>
+                        <div class="font-size-18\5 font-weight-600 pt-4">
+                            <!-- create list 1, 2, 3 for role and resposibility -->
+                            <ol>
+                                <li>Responsible for the sales and marketing of the company’s products in the export market.
+                                </li>
+                                <li>Develop and implement sales and marketing strategies to achieve sales target.</li>
+                                <li>Develop and maintain good rapport with existing and potential customers.</li>
+                                <li>Provide market feedback to the management.</li>
+                                <li>Prepare sales reports and forecasts.</li>
+                                <li>Perform any other duties as assigned by the management.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div class="text-center pt-4">
                 Send your Application & CV directly to <a
@@ -96,3 +102,11 @@ export default {
     }
 }
 </script>
+
+<style>
+.collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+</style>

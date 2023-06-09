@@ -1116,3 +1116,10 @@ footer {
     padding-bottom: 20rem !important;
   }
 }
+
+// create @media for md to sm
+@media (max-width: 991px) {
+  .min-w-lg-80{
+    min-width: 80% !important;
+  }
+}

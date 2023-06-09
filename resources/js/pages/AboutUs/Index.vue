@@ -1,26 +1,37 @@
 <template>
-    <div class="pt-10 px-5">
-        <div style="overflow: auto;">
-            <div class="d-flex gap-3 pt-5">
-                <div class="col-md-3 position-relative" v-for="year in years" :key="year">
-                    <div class="card rounded-full radius-12 bg-p-orange-9 border-0 position-absolute z-1 -top-30 w-100">
-                        <div class="card-body">
-                            <div class="text-center font-size-20 font-weight-700">
-                                {{ year }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card rounded-full radius-12 bg-p-orange-10 border-0 pt-4">
-                        <div class="card-body">
-                            <div class="text-center text-p-white font-size-12 font-weight-400">
-                                Establishment of B2B business, elevenia.biz, as one-stop
-                                goods and services solutions for corporate customers
+    <section class="hero">
+        <div class="image-hero position-relative">
+            <img src="/assets/images/hero-service.png" style="width: 100%;" />
+            <div>
+                <div class="position-absolute px-4"
+                    style="right: 2%;bottom: 10%;">
+                    <div style="overflow: auto;">
+                        <div class="d-flex gap-3 pt-5">
+                            <div class="col-md-3 position-relative min-w-lg-80" v-for="year in years" :key="year">
+                                <div
+                                    class="card rounded-full radius-12 bg-p-orange-9 border-0 position-absolute z-1 -top-30 w-100">
+                                    <div class="card-body">
+                                        <div class="text-center font-size-20 font-weight-700">
+                                            {{ year }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card rounded-full radius-12 bg-p-orange-10 border-0 pt-4">
+                                    <div class="card-body">
+                                        <div class="text-center text-p-white font-size-12 font-weight-400">
+                                            Establishment of B2B business, elevenia.biz, as one-stop
+                                            goods and services solutions for corporate customers
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+    <div class="px-5">
         <div class="font-size-48 font-weight-700 pt-5">
             About Us
         </div>
@@ -92,64 +103,64 @@
         </div>
         <div class="d-flex justify-content-center">
             <div style="
-                    background: white;
-                    padding: 8rem;
-                    border-radius: 100rem;
-                    width: 20%;
-                    border: 1rem solid #363635;
-                    position: relative;
-                ">
-                <div style="
-                        position: absolute;
-                        background: #F2AF2D;
-                        border-radius: 20rem;
-                        width: 40%;
-                        height: 40%;
-                        font-size: 21px;
-                        font-weight: 700;
-                        color: white;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        top: -40px;
-                        right: 30px;
+                        background: white;
+                        padding: 8rem;
+                        border-radius: 100rem;
+                        width: 20%;
+                        border: 1rem solid #363635;
+                        position: relative;
                     ">
+                <div style="
+                            position: absolute;
+                            background: #F2AF2D;
+                            border-radius: 20rem;
+                            width: 40%;
+                            height: 40%;
+                            font-size: 21px;
+                            font-weight: 700;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            top: -40px;
+                            right: 30px;
+                        ">
                     Vision
                 </div>
 
                 <div style="
-                        position: absolute;
-                        background: #EC283A;
-                        border-radius: 20rem;
-                        width: 40%;
-                        height: 40%;
-                        font-size: 21px;
-                        font-weight: 700;
-                        color: white;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        bottom: 75px;
-                        left: -55px;
-                    ">
+                            position: absolute;
+                            background: #EC283A;
+                            border-radius: 20rem;
+                            width: 40%;
+                            height: 40%;
+                            font-size: 21px;
+                            font-weight: 700;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            bottom: 75px;
+                            left: -55px;
+                        ">
                     Mission
                 </div>
 
                 <div style="
-                        position: absolute;
-                        background: #63B645;
-                        border-radius: 20rem;
-                        width: 40%;
-                        height: 40%;
-                        font-size: 21px;
-                        font-weight: 700;
-                        color: white;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        bottom: -31px;
-                        right: 8px;
-                    ">
+                            position: absolute;
+                            background: #63B645;
+                            border-radius: 20rem;
+                            width: 40%;
+                            height: 40%;
+                            font-size: 21px;
+                            font-weight: 700;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            bottom: -31px;
+                            right: 8px;
+                        ">
                     Value
                 </div>
             </div>
