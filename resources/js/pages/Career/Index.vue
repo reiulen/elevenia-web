@@ -21,7 +21,7 @@
                 So why do you have to wait? Send your resume to join us!
             </div>
 
-            <div class="card border-0 bg-p-grey-43 p-3 mt-5" @click="toggleCollapse">
+            <div class="card border-0 bg-p-grey-43 p-3 mt-5">
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <div class="font-size-20 font-weight-400">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div v-if="isCollapsed">
+            <div >
                 <div class="card border-0 bg-p-orange-9 mt-2">
 
                     <div class="card-body">
@@ -103,10 +103,10 @@ export default {
 }
 </script>
 
-<style>
+<!-- <style>
 .collapse {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
-</style>
+</style> -->
