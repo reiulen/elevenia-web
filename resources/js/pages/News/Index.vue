@@ -13,9 +13,6 @@
         </div>
         <section class="my-5">
             <div class="container">
-                <div class="text-center font-weight-700 font-size-21">
-                    NEWS & UPDATE
-                </div>
                 <div class="row justify-content-center align-items-center py-5 px-xl-5 g-md-5 gy-4">
                     <NewsUpdateComponent />
                 </div>

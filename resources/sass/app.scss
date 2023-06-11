@@ -1123,3 +1123,16 @@ footer {
     min-width: 80% !important;
   }
 }
+
+
+.toggle-accordion {
+    &.not-collapsed {
+        img {
+            rotate: 90deg;
+            transition: rotate 0.3s ease-in-out;
+        }
+    }
+    img {
+        transition: rotate 0.3s ease-in-out;
+    }
+}

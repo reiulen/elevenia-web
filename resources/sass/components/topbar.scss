@@ -59,6 +59,10 @@ $header-height-mobile : 54px;
                         line-height: 20px !important;
                         font-size: 14px !important;
                     }
+
+                    &.router-link-exact-active {
+                        color: #5533FF;
+                    }
                 }
             }
             @media screen and (max-width: 991px) {

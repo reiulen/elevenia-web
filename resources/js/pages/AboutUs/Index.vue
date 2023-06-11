@@ -1,28 +1,22 @@
 <template>
     <section class="hero">
-        <div class="image-hero position-relative">
-            <img src="/assets/images/hero-service.png" style="width: 100%;" />
-            <div>
-                <div class="position-absolute px-4"
-                    style="right: 2%;bottom: 10%;">
-                    <div style="overflow: auto;">
-                        <div class="d-flex gap-3 pt-5">
-                            <div class="col-md-3 position-relative min-w-lg-80" v-for="year in years" :key="year">
-                                <div
-                                    class="card rounded-full radius-12 bg-p-orange-9 border-0 position-absolute z-1 -top-30 w-100">
-                                    <div class="card-body">
-                                        <div class="text-center font-size-20 font-weight-700">
-                                            {{ year }}
-                                        </div>
-                                    </div>
+        <div style="background: url('/assets/images/hero-service.png'); height: 60vh; background-repeat: no-repeat;"
+            class="d-flex align-items-center">
+            <div class="overflow-auto mx-4">
+                <div class="d-flex align-items-center gap-3 pt-5 pb-2 px-4">
+                    <div class="col-lg-3 col-md-4 col-12 position-relative" v-for="year in years" :key="year">
+                        <div class="card rounded-full radius-12 bg-p-orange-9 border-0 position-absolute z-1 -top-30 w-100">
+                            <div class="card-body">
+                                <div class="text-center font-size-20 font-weight-700">
+                                    {{ year }}
                                 </div>
-                                <div class="card rounded-full radius-12 bg-p-orange-10 border-0 pt-4">
-                                    <div class="card-body">
-                                        <div class="text-center text-p-white font-size-12 font-weight-400">
-                                            Establishment of B2B business, elevenia.biz, as one-stop
-                                            goods and services solutions for corporate customers
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-full radius-12 bg-p-orange-10 border-0 pt-4">
+                            <div class="card-body">
+                                <div class="text-center text-p-white font-size-12 font-weight-400">
+                                    Establishment of B2B business, elevenia.biz, as one-stop
+                                    goods and services solutions for corporate customers
                                 </div>
                             </div>
                         </div>

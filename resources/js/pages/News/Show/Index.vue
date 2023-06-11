@@ -9,8 +9,8 @@
             </div>
         </section>
     </div>
-    <div class="px-lg-5 px-3">
-        <div class="row">
+    <section class="container mb-5">
+        <div class="row py-5">
             <div class="col-md-8">
                 <img src="/assets/images/news-detail.png" alt="" class="img-fluid" />
                 <div className="font-size-16 font-weight-600 pt-5">
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

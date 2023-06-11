@@ -17,7 +17,7 @@
           Tebel.
         </div>
         <router-link
-          to="/"
+          to="/news/detail-slug"
           class="btn btn-outline-p-orange-9 text-p-grey-17 font-weight-500 py-2 hover-text-p-grey-17 w-100 mt-5"
         >
           Read More
@@ -43,7 +43,7 @@
           Tebel.
         </div>
         <router-link
-          to="/"
+          to="/news/detail-slug"
           class="btn btn-outline-p-orange-9 text-p-grey-17 font-weight-500 py-2 hover-text-p-grey-17 w-100 mt-5"
         >
           Read More
@@ -69,7 +69,7 @@
           Tebel.
         </div>
         <router-link
-          to="/"
+          to="/news/detail-slug"
           class="btn btn-outline-p-orange-9 text-p-grey-17 font-weight-500 py-2 hover-text-p-grey-17 w-100 mt-5"
         >
           Read More

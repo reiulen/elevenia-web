@@ -30,7 +30,7 @@ const routes = [
         component: News
     },
     {
-        path: '/news/show',
+        path: '/news/:slug',
         name: 'News Show',
         component: NewsShow
     },

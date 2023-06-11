@@ -5,29 +5,29 @@
             <div>
                 <div class="position-absolute text-white font-size-xl-21 font-size-lg-18 font-size-md-14 font-size-sm-11 font-size-6"
                     style="top: 50%; right: 20%">
-                    Have any <b>Inquiry</b> or Need further <br />
-                    <b>Information</b>
+                    Have any <span class="font-weight-700 font-size-md-28 font-size-10">Inquiry</span> or Need further <br />
+                    <span class="font-weight-700 font-size-md-28 font-size-10">Information</span>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="px-lg-5 px-4">
+        <div class="container">
             <div class="font-size-48 font-weight-700 pt-5">
                 Contact Us
             </div>
-            <div class="card mt-4 p-4 border-0"
-                style="background: url(/assets/images/contact-us-bg.png); padding-bottom: 10rem;">
-                <div class="card-body pb-lg-20">
-                    <div class="row">
+            <div class="card mt-4 border-0"
+                style="background: url(/assets/images/contact-us-bg.png);">
+                <div class="card-body pb-lg-20 p-3 p-md-5">
+                    <div class="row gy-4">
                         <div class="col-md-6">
                             <div class="card bg-p-grey-43 border-0">
                                 <div class="card-body">
                                     <div style="
-                                                                    display: flex;
-                                                                    flex-direction: column;
-                                                                    gap: 1rem
-                                                                ">
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 1rem
+                                        ">
                                         <div class="font-size-21 font-weight-700">
                                             Phone
                                             <div class="font-size-18 font-weight-400">
@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="card bg-p-grey-43 border-0">
-                                <div class="card-body p-5">
+                                <div class="card-body p-md-5 p-3">
                                     <form>
                                         <label>
                                             <div class="font-size-18 font-weight-400">
