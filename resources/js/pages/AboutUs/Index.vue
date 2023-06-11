@@ -25,7 +25,7 @@
             </div>
         </div>
     </section>
-    <div class="px-5">
+    <div class="container">
         <div class="font-size-48 font-weight-700 pt-5">
             About Us
         </div>
@@ -95,77 +95,29 @@
         <div class="font-size-25 font-weight-700 py-5 text-center">
             About Us
         </div>
-        <div class="d-flex justify-content-center">
-            <div style="
-                        background: white;
-                        padding: 8rem;
-                        border-radius: 100rem;
-                        width: 20%;
-                        border: 1rem solid #363635;
-                        position: relative;
-                    ">
-                <div style="
-                            position: absolute;
-                            background: #F2AF2D;
-                            border-radius: 20rem;
-                            width: 40%;
-                            height: 40%;
-                            font-size: 21px;
-                            font-weight: 700;
-                            color: white;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            top: -40px;
-                            right: 30px;
-                        ">
-                    Vision
-                </div>
-
-                <div style="
-                            position: absolute;
-                            background: #EC283A;
-                            border-radius: 20rem;
-                            width: 40%;
-                            height: 40%;
-                            font-size: 21px;
-                            font-weight: 700;
-                            color: white;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            bottom: 75px;
-                            left: -55px;
-                        ">
-                    Mission
-                </div>
-
-                <div style="
-                            position: absolute;
-                            background: #63B645;
-                            border-radius: 20rem;
-                            width: 40%;
-                            height: 40%;
-                            font-size: 21px;
-                            font-weight: 700;
-                            color: white;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            bottom: -31px;
-                            right: 8px;
-                        ">
-                    Value
-                </div>
-            </div>
+        <div class="d-flex justify-content-center container">
+            <motto />
         </div>
 
         <div class="font-size-25 font-weight-700 py-5 text-center">
             Our Team
         </div>
-        <div class="d-flex gap-3 justify-content-center">
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
             <div>
                 <img src="/assets/images/our-team-01.png" alt="" width="80%" height="100%" />
+                <!-- <div class="card border-0 p-3 bg-p-grey-43">
+                    <div class="card-body p-0">
+                        <div class="font-size-16 font-weight-700">
+                            Sugiharto Damakusuma
+                        </div>
+                        <div class="font-size-15 font-weight-600 text-p-orange-9 text-center">
+                            Chief Executive Officer
+                        </div>
+                        <div class="font-size-13 mt-3 font-weight-600 text-p-orange-9 text-center">
+                            "lets make it happen"
+                        </div>
+                    </div>
+                </div> -->
                 <div class="card border-0 bg-p-orange-9">
                     <div class="card-body p-1"></div>
                 </div>
@@ -196,23 +148,43 @@
             </div>
         </div>
 
-        <div class="font-size-25 font-weight-700 py-5 text-center">
-            Our Valuable Partners
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="d-flex justify-content-end">
-                <img src="/assets/images/colaboration.png" alt="" width="80%" height="100%" />
+
+        <section style="margin-top: 5rem !important;">
+            <div class="container">
+                <div class="text-center font-weight-700 font-size-24"> Our Valuable Partners </div>
+                <div class="row justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
+                    <slider :items="partners" />
+                </div>
             </div>
-            <div>
-                <img src="/assets/images/colaboration.png" alt="" width="80%" height="100%" />
-            </div>
-        </div>
+        </section>
     </div>
 </template>
 
 <script>
+import Slider from "@/components/Slider.vue";
+import Motto from "@/components/Motto.vue";
 export default {
+    components: {
+        Slider,
+        Motto
+    },
     name: "Home",
+    data() {
+        return {
+            partners: [
+                { id: 1, logo: '/assets/images/client.png' },
+                { id: 2, logo: '/assets/images/client.png' },
+                { id: 3, logo: '/assets/images/client.png' },
+                { id: 4, logo: '/assets/images/client.png' },
+                { id: 5, logo: '/assets/images/client.png' },
+                { id: 6, logo: '/assets/images/client.png' },
+                { id: 7, logo: '/assets/images/client.png' },
+                { id: 8, logo: '/assets/images/client.png' },
+                { id: 9, logo: '/assets/images/client.png' },
+                { id: 10, logo: '/assets/images/client.png' },
+            ],
+        };
+    },
     computed: {
         years() {
             const startYear = 2019;

@@ -1014,6 +1014,10 @@ $color in $theme-colors {
 }
 
 .hero {
+    margin-top: 60px !important;
+    @media screen and (min-width: $breakpoint-lg) {
+        margin-top: 4rem !important;
+    }
    .image-hero {
         margin-top: 40px !important;
         @media screen and (min-width: $breakpoint-lg) {

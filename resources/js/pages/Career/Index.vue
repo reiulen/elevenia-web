@@ -13,7 +13,7 @@
         </div>
     </section>
     <section>
-        <div class="px-lg-8 px-3 pt-5">
+        <div class="container pt-5">
             <div class="font-size-21 font-weight-400">
                 We are open to fresh graduates who want to start developing careers and professionals with proven
                 experiences in the related business who wish to increase their values and competencies in the trading
@@ -22,12 +22,12 @@
             </div>
             <div class="vstack gap-4 mt-5 mb-4">
                 <b-card no-body class="mb-1 border-0 bg-transparent">
-                    <div class="card-body bg-p-grey-43 p-4 radius-8">
+                    <div class="card-body bg-p-grey-43 p-4 radius-8" block v-b-toggle.accordion-2>
                         <div class="d-flex justify-content-between">
                             <div class="font-size-20 font-weight-400">
                                 Export Sales Manager (Enusantara)
                             </div>
-                            <div class="toggle-accordion" block v-b-toggle.accordion-2>
+                            <div class="toggle-accordion">
                                 <img src="/assets/images/arrow-left-circle.svg" />
                             </div>
                         </div>

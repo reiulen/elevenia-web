@@ -7,16 +7,16 @@
                                             ">
         </section>
     </div>
-    <section class="px-5">
+    <section class="container">
         <div class="font-size-48 font-weight-700 pt-5">
             Product & Services
         </div>
         <div class="d-flex gap-2 pt-5">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <img src="/assets/images/bg-enusantara.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <div class="font-size-18 font-weight-400">
                         e-Nusantara contributes its significant role in building up the trading ecosystem of Indonesian
                         commodities (such as spices, herbs, fishery, etc.), including the derivatives as value-added, to
@@ -75,10 +75,10 @@
         </div>
         <div class="d-flex gap-2 pt-5">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <img src="/assets/images/logo-elevenia-1.png" class="img-fluid" alt="">
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <div class="font-size-18 font-weight-400">
                         elevenia.biz provide corporate customers with a solution-based procurement process with a one-stop
                         service concept to help them fulfil their needs in its operations which might consist of goods and
