@@ -96,20 +96,8 @@ export default {
                     link: '/'
                 },
                 {
-                    name: 'About Us',
-                    link: '/about-us'
-                },
-                {
-                    name: 'Product & Services',
-                    link: '/product-service'
-                },
-                {
-                    name: 'News',
-                    link: '/news'
-                },
-                {
-                    name: 'Career',
-                    link: '/career'
+                    name: 'Product',
+                    link: '/product'
                 },
                 {
                     name: 'Contact Us',
