@@ -22,7 +22,7 @@
             </div>
             <div class="vstack gap-4 mt-5 mb-4">
                 <b-card no-body class="mb-1 border-0 bg-transparent">
-                    <div class="card-body bg-p-grey-43 p-4 radius-8" block v-b-toggle.accordion-2>
+                    <div class="card-body bg-p-grey-43 p-4 radius-8 accordion-career" block v-b-toggle.accordion-2>
                         <div class="d-flex justify-content-between">
                             <div class="font-size-20 font-weight-400">
                                 Export Sales Manager (Enusantara)
@@ -99,9 +99,7 @@ export default {
         };
     },
     methods: {
-        toggleAccordion(key) {
-            $(`.collpse-key${key}`).toggleClass("collapseAccordion");
-        }
+
     }
 }
 </script>

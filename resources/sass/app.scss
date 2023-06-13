@@ -1128,15 +1128,19 @@ footer {
   }
 }
 
-
-.toggle-accordion {
+.accordion-career {
     &.not-collapsed {
-        img {
-            rotate: 90deg;
-            transition: rotate 0.3s ease-in-out;
+        .toggle-accordion {
+            img {
+                rotate: 90deg;
+                transition: rotate 0.3s ease-in-out;
+            }
         }
     }
-    img {
-        transition: rotate 0.3s ease-in-out;
+
+    .toggle-accordion {
+        img {
+            transition: rotate 0.3s ease-in-out;
+        }
     }
 }

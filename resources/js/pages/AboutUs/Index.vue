@@ -92,14 +92,14 @@
             </div>
         </div>
 
-        <div class="font-size-25 font-weight-700 py-5 text-center">
+        <div class="font-size-24 font-weight-700 py-5 text-center">
             About Us
         </div>
         <div class="d-flex justify-content-center container">
             <motto />
         </div>
 
-        <div class="font-size-25 font-weight-700 py-5 text-center">
+        <div class="font-size-24 font-weight-700 py-5 text-center">
             Our Team
         </div>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
