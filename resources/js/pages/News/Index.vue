@@ -1,12 +1,15 @@
 <template class="bg-p-white">
-    <div>
-        <section style="
-                padding-top: 18rem;
-                padding-bottom: 10rem;
-                background: url('/assets/images/hero-service.png') center center no-repeat;
-            ">
-        </section>
-    </div>
+    <section class="hero" style="margin-top: 25px !important">
+        <div class="image-hero position-relative">
+            <img src="/assets/images/bg-news.png" style="width: 100%;" />
+            <div>
+                <div class="position-absolute text-white font-size-xl-28 font-size-lg-20 font-size-md-18 font-size-sm-14 font-size-10"
+                    style="top: 50%; right: 45%">
+                    Our <b>Activity</b> in <b>Elevenia</b>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="px-lg-5 px-3">
         <div class="font-size-48 font-weight-700 pt-5">
             News & Update
