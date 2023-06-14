@@ -6,24 +6,9 @@
                     <img src="/assets/images/logo-espn.png" alt="logo"
                         style="height: 40px; object-fit: cover;" />
                 </div>
-                <div class="d-flex align-items-center gap-lg-2 gap-xl-5 mx-auto flex-wrap gap-1 item-topbar gap-2">
-                    <div class="font-weight-400 font-size-12 hstack align-items-center gap-2" style="max-height: 15px;">
-                        <div>
-                            <img src="/assets/images/icons/location.svg" />
-                        </div>
-                        <span>Wisma 46-Kota BNI, Lantai 39, Jl. Jendral Sudirman Kav. 1</span>
-                    </div>
-                    <div class="font-weight-400 font-size-12 hstack align-items-center gap-2" style="max-height: 15px;">
-                        <div>
-                            <img src="/assets/images/icons/call.svg" />
-                        </div>
-                        <span>02139371122</span>
-                    </div>
-                    <div class="font-weight-400 font-size-12 hstack align-items-center gap-2" style="max-height: 15px;">
-                        <div>
-                            <img src="/assets/images/icons/mail.svg" />
-                        </div>
-                        <span>enusantara@elevenia.co.id</span>
+                <div class="d-flex align-items-center gap-lg-2 gap-xl-5 mx-auto flex-wrap gap-1 item-topbar">
+                    <div class="font-size-12 font-weight-400">
+                        Back To Previous
                     </div>
                 </div>
             </div>
