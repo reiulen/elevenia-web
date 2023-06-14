@@ -131,22 +131,32 @@
                         <p>Position 2</p>
                     </div>
                 </div> -->
-                <!-- Add more team members here -->
-            <!-- </div>
+        <!-- Add more team members here -->
+        <!-- </div>
         </div> -->
 
 
         <div class="d-flex gap-3 justify-content-center">
-            <div v-for="team in teams.slice(0, 4)" :key="team.id" style="width: 100%;">
-                <img :src="team.path" alt="" style="width: 80%; height: 60%;" />
+            <div v-for="team in teams.slice(0, 4)" class="teams-card" :key="team.id" style="width: 100%; text-align: center; position: relative;">
+                <img :src="team.path" alt="" style="width: 70%; height: 80%;" />
                 <div class="card border-0 bg-p-orange-9">
                     <div class="card-body p-1"></div>
+                </div>
+                <div class="card border-0 bg-p-orange-9 card-hovered d-none position-absolute" style="top: 0; right: -10rem; z-index: 99999;">
+                    <div class="card-body p-3">
+                        <div class="font-size-16 font-weight-400">
+                            {{ team.name }}
+                        </div>
+                        <div class="font-size-16 font-weight-400">
+                            {{ team.code }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="d-flex gap-3 justify-content-center">
-            <div v-for="team in teams.slice(4, 8)" :key="team.id" style="width:8;">
-                <img :src="team.path" alt="" style="width: 70%; height: 60%;" />
+            <div v-for="team in teams.slice(4, 8)" :key="team.id" style="width:80%; text-align: center;">
+                <img :src="team.path" alt="" style="width: 70%; height: 80%;" />
                 <div class="card border-0 bg-p-orange-9">
                     <div class="card-body p-1"></div>
                 </div>

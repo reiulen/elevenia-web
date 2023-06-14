@@ -1187,3 +1187,11 @@ footer {
         }
     }
 }
+
+.teams-card {
+  &:hover{
+    .card-hovered {
+      display: block;
+    }
+  }
+}
