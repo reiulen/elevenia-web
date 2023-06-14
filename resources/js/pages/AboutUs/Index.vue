@@ -102,10 +102,79 @@
         <div class="font-size-24 font-weight-700 py-5 text-center">
             Our Team
         </div>
-        <div class="d-flex gap-3 justify-content-center flex-wrap">
-            <div>
-                <img src="/assets/images/our-team-01.png" alt="" width="80%" height="100%" />
-                <!-- <div class="card border-0 p-3 bg-p-grey-43">
+        <!--  <section class="team-section">
+            <div class="team-member">
+                <img src="path_to_image" alt="Team Member Photo" class="team-photo">
+                <div class="team-info">
+                    <h3 class="member-name">John Doe</h3>
+                    <p class="member-position">Designer</p>
+                    <p class="member-team">Design Team</p>
+                </div>
+            </div> -->
+        <!-- Tambahkan lebih banyak anggota tim di sini -->
+        <!-- </section> -->
+
+        <!-- <div class="team-section">
+            <h2>Our Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="/assets/images/our-team/FERNANDI MAHENDRASUSILA - XLP00248.png" alt="Team Member 1">
+                    <div class="member-details">
+                        <h3>John Doe</h3>
+                        <p>Position 1</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="/assets/images/our-team/FERNANDI MAHENDRASUSILA - XLP00248.png" alt="Team Member 2">
+                    <div class="member-details">
+                        <h3>Jane Smith</h3>
+                        <p>Position 2</p>
+                    </div>
+                </div> -->
+        <!-- Add more team members here -->
+        <!-- </div>
+        </div> -->
+
+
+        <div class="d-flex gap-3 justify-content-center">
+            <div v-for="team in teams.slice(0, 4)" class="teams-card" :key="team.id" style="width: 100%; text-align: center; position: relative;">
+                <img :src="team.path" alt="" style="width: 70%; height: 80%;" />
+                <div class="card border-0 bg-p-orange-9">
+                    <div class="card-body p-1"></div>
+                </div>
+                <div class="card border-0 bg-p-orange-9 card-hovered d-none position-absolute" style="top: 0; right: -10rem; z-index: 99999;">
+                    <div class="card-body p-3">
+                        <div class="font-size-16 font-weight-400">
+                            {{ team.name }}
+                        </div>
+                        <div class="font-size-16 font-weight-400">
+                            {{ team.code }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex gap-3 justify-content-center">
+            <div v-for="team in teams.slice(4, 8)" :key="team.id" style="width:80%; text-align: center;">
+                <img :src="team.path" alt="" style="width: 70%; height: 80%;" />
+                <div class="card border-0 bg-p-orange-9">
+                    <div class="card-body p-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-4" style="height: 70%" v-for="team in teams" :key="team.id">
+                <div style="width: 100%;">
+                    <img :src="team.path" alt="" style="width: 100%; height: 70%;" />
+                    <div class="card border-0 bg-p-orange-9">
+                        <div class="card-body p-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="card border-0 p-3 bg-p-grey-43">
                     <div class="card-body p-0">
                         <div class="font-size-16 font-weight-700">
                             Sugiharto Damakusuma
@@ -118,35 +187,6 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="card border-0 bg-p-orange-9">
-                    <div class="card-body p-1"></div>
-                </div>
-            </div>
-            <div>
-                <img src="/assets/images/our-team-01.png" alt="" width="80%" height="100%" />
-                <div class="card border-0 bg-p-orange-9">
-                    <div class="card-body p-1"></div>
-                </div>
-            </div>
-            <div>
-                <img src="/assets/images/our-team-01.png" alt="" width="80%" height="100%" />
-                <div class="card border-0 bg-p-orange-9">
-                    <div class="card-body p-1"></div>
-                </div>
-            </div>
-            <div>
-                <img src="/assets/images/our-team-01.png" alt="" width="80%" height="100%" />
-                <div class="card border-0 bg-p-orange-9">
-                    <div class="card-body p-1"></div>
-                </div>
-            </div>
-            <div>
-                <img src="/assets/images/our-team-01.png" alt="" width="80%" height="100%" />
-                <div class="card border-0 bg-p-orange-9">
-                    <div class="card-body p-1"></div>
-                </div>
-            </div>
-        </div>
 
 
         <section style="margin-top: 5rem !important;">
@@ -183,6 +223,37 @@ export default {
                 { id: 9, logo: '/assets/images/client.png' },
                 { id: 10, logo: '/assets/images/client.png' },
             ],
+            teams: [
+                {
+                    name: "Fernandi Mahendrasusila",
+                    code: "XLP00248",
+                    path: "/assets/images/our-team/FERNANDI MAHENDRASUSILA - XLP00248.png",
+                }, {
+                    name: "Hendra Gunawan",
+                    code: "XLP00013",
+                    path: "/assets/images/our-team/HENDRA GUNAWAN - XLP00013.png",
+                }, {
+                    name: "Ivan Jonatan",
+                    code: "XLP00014",
+                    path: "/assets/images/our-team/IVAN JONATAN.png",
+                }, {
+                    name: "Monika Ferolina S",
+                    code: "XLP00597",
+                    path: "/assets/images/our-team/Monika Ferolina S - XLP00597.png",
+                }, {
+                    name: "SUGIHARTO DARMAKUSUMA",
+                    code: "XLP00001",
+                    path: "/assets/images/our-team/SUGIHARTO DARMAKUSUMA - XLP00001.png",
+                }, {
+                    name: "TRIANITA HESTI",
+                    code: "XLP00659",
+                    path: "/assets/images/our-team/TRIANITA HESTI - XLP00659.png",
+                }, {
+                    name: "YOGI PRATIKNO",
+                    code: "XLP00008",
+                    path: "/assets/images/our-team/YOGI PRATIKNO - XLP00008.png",
+                }
+            ]
         };
     },
     computed: {

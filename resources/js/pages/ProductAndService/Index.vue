@@ -1,12 +1,15 @@
 <template class="bg-p-white">
-    <div>
-        <section style="
-                                                padding-top: 18rem;
-                                                padding-bottom: 10rem;
-                                                background: url('/assets/images/hero-service.png') center center no-repeat;
-                                            ">
-        </section>
-    </div>
+    <section class="hero" style="margin-top: 15px !important">
+        <div class="image-hero position-relative">
+            <img src="/assets/images/bg-product-and-service.png" style="width: 100%;" />
+            <div>
+                <div class="position-absolute text-white font-size-xl-21 font-size-lg-18 font-size-md-14 font-size-sm-11 font-size-6"
+                    style="top: 50%; right: 25%">
+                    Revolutionizing the <b>Way</b> You in your <b>Business</b>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="container">
         <div class="font-size-48 font-weight-700 pt-5">
             Product & Services
@@ -31,7 +34,8 @@
                     <div class="font-size-14 font-weight-700 pt-2 text-center">
                         Product in catalogue
                     </div>
-                    <div class="d-flex gap-3 pt-3 justify-content-md-start justify-content-center align-items-center" style="flex-wrap: wrap;">
+                    <div class="d-flex gap-3 pt-3 justify-content-md-start justify-content-center align-items-center"
+                        style="flex-wrap: wrap;">
                         <div class="mt-4">
                             <div class="card border-2 border-black radius-2">
                                 <div class="card-body">
@@ -89,7 +93,8 @@
                     <div class="font-size-14 font-weight-700 pt-2 text-center">
                         Product in catalogue
                     </div>
-                    <div class="d-flex gap-3 pt-3 justify-content-md-start justify-content-center align-items-center" style="flex-wrap: wrap;">
+                    <div class="d-flex gap-3 pt-3 justify-content-md-start justify-content-center align-items-center"
+                        style="flex-wrap: wrap;">
                         <div class="mt-4">
                             <div class="card border-2 border-black radius-2">
                                 <div class="card-body">

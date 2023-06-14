@@ -2,22 +2,18 @@
     <header class="header fixed-top">
         <div class="container-lg container-fluid d-none d-md-block">
             <div class="top-navbar gap-4">
-                <div class="mx-auto item-topbar">
-                    <img src="/assets/images/logo-espn.png" alt="logo"
-                        style="height: 40px; object-fit: cover;" />
+                <div class="item-topbar">
+                    <img src="/assets/images/logo-espn.png" alt="logo" style="height: 40px; object-fit: cover;" />
                 </div>
-                <div class="d-flex align-items-center gap-lg-2 gap-xl-5 mx-auto flex-wrap gap-1 item-topbar">
-                    <div class="font-size-12 font-weight-400">
-                        Back To Previous
-                    </div>
+                <div v-if="isPath('/')" class="text-end w-100 font-size-12 font-weight-400">
+                    <span>Bact To Previous</span>
                 </div>
             </div>
         </div>
         <b-navbar class="navbar-top navbar-expand-lg bg-body-tertiary" toggleable="md" type="light" variant="light">
             <div class="container-md">
                 <b-navbar-brand class="d-md-none focus-border-0">
-                    <img src="/assets/images/logo-espn.png" alt="logo"
-                        style="height: 35px;" />
+                    <img src="/assets/images/logo-espn.png" alt="logo" style="height: 35px;" />
                 </b-navbar-brand>
                 <div v-if="isCollapse" role="button" class="btn border-0 d-md-none" @click="toggleCollapse(false)">
                     <i class="fas fa-times font-size-30"></i>
@@ -28,7 +24,8 @@
                 <b-collapse id="navBarCollapse" is-nav>
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li v-for="item in navbar" class="nav-item">
-                            <router-link :class="`nav-link ${item.link == currentUrl ? 'active' : ''}`" :to="item.link" >{{ item.name }}</router-link>
+                            <router-link :class="`nav-link ${item.link == currentUrl ? 'active' : ''}`" :to="item.link">{{
+                                item.name }}</router-link>
                         </li>
                         <li class="nav-item d-md-none pt-0">
                             <div class="nav-link px-3 pb-3 pt-0">
@@ -107,10 +104,13 @@ export default {
         toggleCollapse(status) {
             this.isCollapse = status;
             const navBarCollapse = $('#navBarCollapse');
-            if(status)
+            if (status)
                 navBarCollapse.show('slow');
             else
                 navBarCollapse.hide('slow');
+        },
+        isPath(path) {
+            return this.$route.path != path;
         }
     }
 }
