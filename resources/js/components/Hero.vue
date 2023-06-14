@@ -10,7 +10,7 @@
                         {{ title }}
                     </div>
                 </div>
-                <div class="position-absolute w-100" style="top: 50%; right: -80%; transform: translate(-50%, -50%);">
+                <div class="position-absolute w-100" v-if="showMenu" style="top: 50%; right: -80%; transform: translate(-50%, -50%);">
                     <div class="d-flex gap-1 gap-md-4 w-100">
                         <div v-for="item in navbar"
                             class="font-weight-600 font-size-xl-20 font-size-lg-20 font-size-md-10 font-size-sm-5 font-size-8 text-p-black">
@@ -30,6 +30,10 @@ export default {
         title: {
             type: String,
             default: ""
+        },
+        showMenu: {
+            type: Boolean,
+            default: true
         }
     },
     data() {

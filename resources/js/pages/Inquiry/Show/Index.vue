@@ -7,6 +7,16 @@
             </div>
         </div>
     </section>
+    <section class="container py-5">
+        <div class="d-flex align-items-center gap-5">
+            <div>
+                <img src="/assets/images/black-paper.png" alt="hero" />
+            </div>
+            <div class="font-size-22 font-weight-600">
+                Black Pepper Kel. Tani Bunga Harapan Luwu Timur
+            </div>
+        </div>
+    </section>
     <section class="container mt-4">
         <div class="card border-1 radius-10 border-p-orange-13">
             <div class="card-body">
@@ -37,7 +47,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <select-group label="Country" :data="options" name="county" :required="true" />
+                                    <select-group label="Country" name="county" :required="true" />
                                 </div>
                                 <div class="col-md-6">
                                     <select-group label="City" name="city" />
@@ -100,46 +110,12 @@
 import Hero from "@/components/Hero.vue";
 import InputGroup from "@/components/InputGroup.vue";
 import SelectGroup from "@/components/SelectGroup.vue";
-import axios from "axios";
-
 export default {
     components: {
         Hero,
         InputGroup,
         SelectGroup,
     },
-    name: "Inquiry",
-    data() {
-        return {
-            countries: [],
-            options: [],
-            loading: false,
-        }
-    },
-    methods: {
-        async getDataCountries() {
-            try {
-                this.loading = true;
-                const response = await axios.post('https://countriesnow.space/api/v0.1/countries/positions/range', {
-                    "type": "long",
-                    "min": 1,
-                    "max": 200
-                });
-
-                this.options = response?.data?.data?.map((item) => {
-                    return {
-                        value: item?.iso2,
-                        text: item?.name
-                    }
-                });
-
-            } catch (error) {
-                console.log(error);
-            }
-        }
-    },
-    mounted() {
-        this.getDataCountries();
-    }
+    name: "InquiryShow"
 }
 </script>
