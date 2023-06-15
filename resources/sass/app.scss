@@ -1195,3 +1195,28 @@ footer {
     }
   }
 }
+
+// in handphone margin top 5rem in laptop 10rem
+@media (max-width: 991px) {
+  .hero-news-detail {
+    margin-top: 5rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-news-detail {
+    margin-top: 10rem !important;
+  }
+}
+
+.teams-card {
+  &:hover{
+    padding-right: 10rem !important;
+    transition: padding-right 0.3s ease-in-out;
+
+    .card-hovered {
+      display: block !important;
+      transition: display 0.3s ease-in-out;
+    }
+  }
+}

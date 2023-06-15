@@ -34,48 +34,45 @@
                     </div>
                     <b-collapse id="accordion-2" visible accordion="my-accordion" role="tabpanel">
                         <b-card-body class="bg-p-orange-12 radius-8 mt-2">
-                            <div class="d-flex justify-content-center">
-                                    <span class="badge rounded-pill bg-p-green-17 px-5 py-2"
-                                        style="border: 5px solid white">
-                                        Role and Responsibility
-                                    </span>
+                            <img src="/assets/images/career-job.png" class="img-fluid" />
+                            <!-- <div class="d-flex justify-content-center">
+                                <span class="badge rounded-pill bg-p-green-17 px-5 py-2" style="border: 5px solid white">
+                                    Role and Responsibility
+                                </span>
 
-                                </div>
-                                <div class="font-size-18\5 font-weight-600 pt-4">
-                                    <!-- create list 1, 2, 3 for role and resposibility -->
-                                    <ol>
-                                        <li>Responsible for the sales and marketing of the company’s products in the export
-                                            market.
-                                        </li>
-                                        <li>Develop and implement sales and marketing strategies to achieve sales target.
-                                        </li>
-                                        <li>Develop and maintain good rapport with existing and potential customers.</li>
-                                        <li>Provide market feedback to the management.</li>
-                                        <li>Prepare sales reports and forecasts.</li>
-                                        <li>Perform any other duties as assigned by the management.</li>
-                                    </ol>
-                                </div>
-                                <div class="d-flex justify-content-center pt-4">
-                                    <span class="badge rounded-pill bg-p-green-17 px-5 py-2"
-                                        style="border: 5px solid white">
-                                        Requirement
-                                    </span>
+                            </div>
+                            <div class="font-size-18\5 font-weight-600 pt-4">
+                                <ol>
+                                    <li>Responsible for the sales and marketing of the company’s products in the export
+                                        market.
+                                    </li>
+                                    <li>Develop and implement sales and marketing strategies to achieve sales target.
+                                    </li>
+                                    <li>Develop and maintain good rapport with existing and potential customers.</li>
+                                    <li>Provide market feedback to the management.</li>
+                                    <li>Prepare sales reports and forecasts.</li>
+                                    <li>Perform any other duties as assigned by the management.</li>
+                                </ol>
+                            </div>
+                            <div class="d-flex justify-content-center pt-4">
+                                <span class="badge rounded-pill bg-p-green-17 px-5 py-2" style="border: 5px solid white">
+                                    Requirement
+                                </span>
 
-                                </div>
-                                <div class="font-size-18\5 font-weight-600 pt-4">
-                                    <!-- create list 1, 2, 3 for role and resposibility -->
-                                    <ol>
-                                        <li>Responsible for the sales and marketing of the company’s products in the export
-                                            market.
-                                        </li>
-                                        <li>Develop and implement sales and marketing strategies to achieve sales target.
-                                        </li>
-                                        <li>Develop and maintain good rapport with existing and potential customers.</li>
-                                        <li>Provide market feedback to the management.</li>
-                                        <li>Prepare sales reports and forecasts.</li>
-                                        <li>Perform any other duties as assigned by the management.</li>
-                                    </ol>
-                                </div>
+                            </div>
+                            <div class="font-size-18\5 font-weight-600 pt-4">
+                                <ol>
+                                    <li>Responsible for the sales and marketing of the company’s products in the export
+                                        market.
+                                    </li>
+                                    <li>Develop and implement sales and marketing strategies to achieve sales target.
+                                    </li>
+                                    <li>Develop and maintain good rapport with existing and potential customers.</li>
+                                    <li>Provide market feedback to the management.</li>
+                                    <li>Prepare sales reports and forecasts.</li>
+                                    <li>Perform any other duties as assigned by the management.</li>
+                                </ol>
+                            </div> -->
                         </b-card-body>
                     </b-collapse>
                 </b-card>

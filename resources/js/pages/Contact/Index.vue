@@ -28,21 +28,21 @@
                                             flex-direction: column;
                                             gap: 1rem
                                         ">
-                                        <div class="font-size-21 font-weight-700">
+                                        <div class="font-size-18 font-weight-700">
                                             Phone
-                                            <div class="font-size-18 font-weight-400">
+                                            <div class="font-size-15 font-weight-400">
                                                 02139371122
                                             </div>
                                         </div>
-                                        <div class="font-size-21 font-weight-700">
+                                        <div class="font-size-18 font-weight-700">
                                             Email
-                                            <div class="font-size-18 font-weight-400">
+                                            <div class="font-size-15 font-weight-400">
                                                 corporate.secretary@elevenia.co.id
                                             </div>
                                         </div>
-                                        <div class="font-size-21 font-weight-700">
+                                        <div class="font-size-18 font-weight-700">
                                             Location
-                                            <div class="font-size-18 font-weight-400">
+                                            <div class="font-size-15 font-weight-400">
                                                 Wisma 46-Kota BNI, Lantai 39, Jl. Jendral Sudirman Kav. 1
                                             </div>
                                         </div>
