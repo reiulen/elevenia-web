@@ -1,11 +1,12 @@
 <template>
   <div :class="classname">
     <div
+      class="col-md-6"
       style="
         background: white;
-        padding: 6rem;
+        padding: 8rem;
         border-radius: 100rem;
-        width: 10%;
+        width: 20%;
         border: 1rem solid #363635;
         position: relative;
       "
@@ -30,12 +31,14 @@
           justify-content: center;
           top: -40px;
           right: 30px;
+
         "
       >
         Vision
       </div>
 
       <div
+        role="button"
         @click="
           motto = 'Mission';
           changeMotto();
@@ -60,6 +63,7 @@
       </div>
 
       <div
+        role="button"
         @click="
           motto = 'Value';
           changeMotto();
@@ -83,7 +87,7 @@
         Value
       </div>
     </div>
-    <div v-if="this.motto == 'Value'">
+    <div  class="col-md-6" v-if="this.motto == 'Value'">
       <div>
         <div style="display: flex; gap: 10px;">
           <b>Elevenian, let’s</b>
@@ -136,7 +140,7 @@
         </div>
       </div>
     </div>
-    <div v-if="this.motto == 'Mission'">
+    <div class="col-md-6" v-if="this.motto == 'Mission'">
       <div class="col-md-8">
         <ol>
           <li>
@@ -155,7 +159,7 @@
         </ol>
       </div>
     </div>
-    <div v-if="this.motto == 'Vision'">
+    <div class="col-md-6" v-if="this.motto == 'Vision'">
       <div class="col-md-8">
         To lead the Indonesian trading ecosystem by providing excellent business
         solutions for local and global markets
@@ -164,13 +168,27 @@
   </div>
 </template>
 
+<style scoped>
+.rotated {
+  animation: rotateText 1s ease-in-out;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+</style>
 <script>
 export default {
   name: "Motto",
   data() {
     return {
       motto: null,
-      classname: "d-flex justify-content-center container",
+      classname: "row justify-content-center container",
     };
   },
   methods: {
@@ -178,13 +196,13 @@ export default {
       console.log(this.motto);
       if (this.motto == "Vision") {
         this.classname =
-          "d-flex justify-content-center align-items-center container gap-5";
+          "row justify-content-center align-items-center container gap-5";
       } else if (this.motto == "Mission") {
         this.classname =
-          "d-flex justify-content-center align-items-center container gap-5";
+          "row justify-content-center align-items-center container gap-5";
       } else if (this.motto == "Value") {
         this.classname =
-          "d-flex justify-content-center align-items-center container gap-5";
+          "row justify-content-center align-items-center container gap-5";
       }
     },
   },
