@@ -7,19 +7,19 @@
                         <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
                             Home
                         </router-link>
-                        <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        <router-link to="/about-us" class="font-weight-700 font-size-16 text-decoration-none text-dark">
                             About Us
                         </router-link>
-                        <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        <router-link to="/product-service" class="font-weight-700 font-size-16 text-decoration-none text-dark">
                             Product & Service
                         </router-link>
-                        <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        <router-link to="/news" class="font-weight-700 font-size-16 text-decoration-none text-dark">
                             News
                         </router-link>
-                        <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        <router-link to="/career" class="font-weight-700 font-size-16 text-decoration-none text-dark">
                             Career
                         </router-link>
-                        <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        <router-link to="/contact-us" class="font-weight-700 font-size-16 text-decoration-none text-dark">
                             Contact Us
                         </router-link>
                     </div>
@@ -58,7 +58,7 @@
                                 <img class="me-2" src="/assets/images/icons/mail.svg" />
                             </td>
                             <td>
-                                enusantara@elevenia.co.id
+                                corporate.secretary@elevenia.co.id
                             </td>
                         </tr>
                     </table>

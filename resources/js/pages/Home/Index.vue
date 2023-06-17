@@ -78,17 +78,17 @@ export default {
         return {
             data: [
                 {
-                    image: "/assets/images/marketplace.svg",
+                    image: "/assets/images/procure.png",
                     title: "Procure",
                     description: "We obtain the most suitable goods or services to fulfil your business needs"
                 },
                 {
-                    image: "/assets/images/transact.svg",
+                    image: "/assets/images/transact.png",
                     title: "Transact",
                     description: "We seal the deal referring to your purchase order"
                 },
                 {
-                    image: "/assets/images/deliver.svg",
+                    image: "/assets/images/deliver.png",
                     title: "Deliver",
                     description: "We dispatch the products to your business-designated address"
                 }
