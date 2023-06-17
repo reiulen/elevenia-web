@@ -1,12 +1,12 @@
 <template>
     <header class="header fixed-top">
-        <div class="container-lg container-fluid d-none d-md-block">
+        <div class="container-lg container-fluid d-none d-md-block py-2">
             <div class="top-navbar gap-4">
-                <div class="item-topbar">
+                <router-link to="/" class="item-topbar">
                     <img src="/assets/images/logo-espn.png" alt="logo" style="height: 40px; object-fit: cover;" />
-                </div>
-                <div v-if="isPath('/')" class="text-end w-100 font-size-12 font-weight-400">
-                    <span>Bact To Previous</span>
+                </router-link>
+                <div role="button" @click="backPreviouse()" v-if="isPath('/')" class="text-end w-100 font-size-12 font-weight-400">
+                    <span>Back To Previous</span>
                 </div>
             </div>
         </div>
@@ -97,7 +97,8 @@ export default {
                     name: 'Contact Us',
                     link: '/contact-us'
                 }
-            ]
+            ],
+            linkBack: '',
         }
     },
     methods: {
@@ -109,9 +110,13 @@ export default {
             else
                 navBarCollapse.hide('slow');
         },
+        backPreviouse() {
+            this.$router.back()
+        },
         isPath(path) {
             return this.$route.path != path;
-        }
+        },
+
     }
 }
 </script>

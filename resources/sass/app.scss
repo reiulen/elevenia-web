@@ -1210,8 +1210,14 @@ footer {
 }
 
 .teams-card {
+    &::after {
+        content: '';
+        display: block;
+        border: 6px solid #DFC49D !important;
+        border-radius: 10px;
+    }
   &:hover{
-    padding-right: 10rem !important;
+    padding-right: 5rem !important;
     transition: padding-right 0.3s ease-in-out;
 
     .card-hovered {

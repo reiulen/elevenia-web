@@ -79,7 +79,7 @@
             </div>
             <div class="text-center pt-4">
                 Send your Application & CV directly to <a
-                    href="mailto:recruitment@elevenia.co.id">recruitment@elevenia.co.id</a> with email subject :
+                    href="mailto:recruitment@elevenia.co.id?subject=Hallo%20saya%20ingin%20melamar">recruitment@elevenia.co.id</a> with email subject :
                 <br />Application for [Job Title]
             </div>
         </div>
