@@ -1,6 +1,6 @@
 <template>
   <div class="col-lg-4 col-md-6">
-    <router-link to="/" class="card border-0 radius-10 text-decoration-none">
+    <router-link to="/" class="card border-0 radius-10 text-decoration-none hover-shadow-lg">
       <div>
         <img
           style="width: 100%; height: 230px;"
@@ -26,7 +26,7 @@
     </router-link>
   </div>
   <div class="col-lg-4 col-md-6">
-    <router-link to="/" class="card border-0 radius-10 text-decoration-none">
+    <router-link to="/" class="card border-0 radius-10 text-decoration-none hover-shadow-lg">
       <div>
         <img
           style="width: 100%; height: 230px;"
@@ -52,7 +52,7 @@
     </router-link>
   </div>
   <div class="col-lg-4 col-md-6">
-    <router-link to="/" class="card border-0 radius-10 text-decoration-none">
+    <router-link to="/" class="card border-0 radius-10 text-decoration-none hover-shadow-lg">
       <div>
         <img
           style="width: 100%; height: 230px;"

@@ -96,7 +96,7 @@
                 </div>
               </div>
               <div class="mt-4 text-center">
-                <a href="#" class="btn btn-p-orange-11 px-4 py-3">
+                <a href="/" target="_blank" class="btn btn-p-orange-11 px-4 py-3 hover-shadow-lg">
                   <div class="font-size-14 font-weight-700 text-center">
                     More Product
                   </div>
@@ -176,7 +176,7 @@
                 </div>
               </div>
               <div class="mt-4 text-center">
-                <a href="#" class="btn btn-p-orange-11 px-4 py-3">
+                <a href="" target="_blank" class="btn btn-p-orange-11 px-4 py-3 hover-shadow-lg">
                   <div class="font-size-14 font-weight-700 text-center">
                     More Product
                   </div>
