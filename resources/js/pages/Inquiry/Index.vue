@@ -1,5 +1,5 @@
 <template>
-    <hero title="Inquiry" />
+    <Hero title="Inquiry" />
     <section class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <div class="font-size-14 font-weight-400 text-p-black">

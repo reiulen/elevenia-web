@@ -1,5 +1,5 @@
 <template>
-    <hero title="Product" />
+    <Hero title="Product" />
     <section class="container mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <div class="font-size-14 font-weight-400 text-p-black">
@@ -23,26 +23,24 @@
     </section>
     <section class="container product">
         <div class="row">
-            <div class="col-md-3 mt-4" v-for="item in products">
+            <div class="col-lg-3 col-md-4 col-sm-6 mt-4" v-for="item in products">
                 <div class="card rounded-0 border-0" style="background: transparent;">
                     <div class="card-body p-0 position-relative">
                         <div>
                             <img :src="item.image" class="img-fluid w-100" />
                         </div>
                         <div>
-                            <div class="font-size-15 font-weight-400 text-p-grey-56 mx-3">
-                                Species
-                            </div>
-                            <div class="font-size-16 font-weight-600 text-p-black mx-3 my-2">
-                                {{ item.name }}
-                            </div>
-                            <div class="card border-0 radius-0">
-                                <div class="card-body p-1 bg-p-grey-43">
-                                    <div class="font-size-14 font-weight-700 text-p-orange-13 text-center">
-                                        Request Quote
-                                    </div>
+                            <div>
+                                <div class="font-size-15 font-weight-400 text-p-grey-56 mx-3">
+                                    Species
+                                </div>
+                                <div class="font-size-16 font-weight-600 text-p-black mx-3 my-2">
+                                    {{ item.name }}
                                 </div>
                             </div>
+                            <router-link to="/inquiry" class="btn btn-p-grey-43 font-size-14 font-weight-700 text-p-orange-13 text-center w-100 rounded-0 mt-2">
+                                Request Quote
+                            </router-link>
                         </div>
                     </div>
                 </div>
