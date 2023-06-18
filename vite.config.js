@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
+import glob from 'glob';
 
 export default defineConfig({
     plugins: [
@@ -9,8 +10,11 @@ export default defineConfig({
                 compilerOptions: {
                   compatConfig: {
                     MODE: 2
-                  }
-                }
+                  },
+                },
+                transformAssetUrls: {
+                    includeAbsolute: false
+                 }
             }
         }),
         laravel({
