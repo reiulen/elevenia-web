@@ -55,7 +55,7 @@
       font-display: fallback;
     }
   }
-  
+
 
 @include loadFont('Dalton', '../../public/assets/fonts/dalton/co-headline-bold.ttf', 500);
 @include loadFont('Dalton', '../../public/assets/fonts/dalton/co-headline-light.ttf', 400);

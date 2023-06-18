@@ -14,7 +14,7 @@
                     style="top: 73%; right: 2%">
                     <div class="d-flex align-items-center gap-md-3 gap-1">
                         <a href="https://elevenia.biz" target="_blank">
-                            <img class="img-elevenia" src="/assets/images/logo-elevenia.png" />
+                            <img class="img-elevenia" src="/assets/images/elevenia-white-yellow.png" />
                         </a>
                         <a class="pt-3" href="https://nusantara.elevenia.co.id" target="_blank">
                             <img class="img-nusantara" src="/assets/images/enusantara.png" />
@@ -56,7 +56,7 @@
                 Our Distinguished Clients
             </div>
             <div class="row justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
-                <slider :items="clients" />
+                <Slider :items="clients" />
             </div>
         </div>
     </section>

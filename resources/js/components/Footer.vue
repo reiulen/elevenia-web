@@ -30,7 +30,7 @@
                             <img style="height: 55px;" src="/assets/images/logo-espn.png" />
                         </div>
                         <div class="">
-                            <img style="height: 45px;" src="/assets/images/elevenis-biz-black.png" />
+                            <img style="height: 45px;" src="/assets/images/elevenia-biz-yellow.png" />
                             <img class="pt-3" style="height: 38px;" src="/assets/images/nustantrara-black.png" />
                         </div>
                     </div>
@@ -63,11 +63,6 @@
                         </tr>
                     </table>
                 </div>
-                <!-- <div class="col-12">
-                    <div class="text-center mt-3 font-weight-400 font-size-12">
-                        © 2022 espn all rights reserved
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="text-center my-2 font-weight-400 font-size-12">

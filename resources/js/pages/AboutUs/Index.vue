@@ -3,37 +3,27 @@
     <div
       style="
         background: url('/assets/images/hero-service.png');
-        height: 60vh;
+        background-size: cover;
+        height: 50vh;
         background-repeat: no-repeat;
       "
       class="d-flex align-items-center"
     >
-      <div class="overflow-auto mx-4">
-        <div class="d-flex align-items-center gap-3 pt-5 pb-2 px-4">
+      <div class="overflow-auto ms-4">
+        <div
+          class="achievement d-flex align-items-start gap-5 ps-4 pe-5 pt-md-5"
+        >
           <div
-            class="col-lg-3 col-md-4 col-12 position-relative"
-            v-for="year in years"
-            :key="year"
+            class="position-relative"
+            v-for="(item, index) in achievements"
+            :key="index"
           >
-            <div
-              class="card rounded-full radius-12 bg-p-orange-9 border-0 position-absolute z-1 -top-30 w-100"
-            >
-              <div class="card-body">
-                <div class="text-center font-size-20 font-weight-700">
-                  {{ year }}
-                </div>
+            <div class="item-achievement d-inline-block text-center">
+              <div class="text-p-white font-size-20 font-weight-700">
+                {{ item.year }}
               </div>
-            </div>
-            <div
-              class="card rounded-full radius-12 bg-p-orange-10 border-0 pt-4"
-            >
-              <div class="card-body">
-                <div
-                  class="text-center text-p-white font-size-12 font-weight-400"
-                >
-                  Establishment of B2B business, elevenia.biz, as one-stop goods
-                  and services solutions for corporate customers
-                </div>
+              <div class="text-p-white font-size-12 font-weight-400">
+                {{ item.description }}
               </div>
             </div>
           </div>
@@ -41,26 +31,32 @@
       </div>
     </div>
   </section>
-  <div class="container">
-    <div class="font-size-48 font-weight-700 pt-5">
+  <div class="container pt-4">
+    <div class="font-size-45 font-weight-700">
       About Us
     </div>
     <section class="vstack gap-md-5 gap-4 pt-5">
       <div class="row align-items-center gap-md-0 gap-3">
         <div class="col-md-4">
-          <img src="/assets/images/espn.png" class="img-fluid" alt="" />
+          <img
+            src="/assets/images/espn.png"
+            class="img-fluid"
+            alt=""
+            style="width: 320px;"
+          />
         </div>
         <div class="col-md-8">
           <div class="font-size-16 font-weight-400">
-            e-Nusantara contributes its significant role in building up the
-            trading ecosystem of Indonesian commodities (such as spices, herbs,
-            fishery, etc.), including the derivatives as value-added, to fulfil
-            customers' demands which they have distinct requirements or
-            standards referring to their business needs and even to comply with
-            the regulations in the destination country or region. In parallel,
-            e-Nusantara collaborates with any related parties, empowering the
-            individual or group of farmers to ensure the quality of acquired
-            resources constantly at its best and well-managed.
+            Today, to emphasize its existence as a trading company in the market
+            and within the Salim Group, PT Elevenia Sinergi Prima Nusantara
+            (ESPN) manages the elevenia.biz and e-Nusantara businesses. It was
+            moving away from its predecessor company and present to actively
+            develop potential Indonesian commodities and embrace every business
+            opportunity from any parties with similar objectives to collaborate
+            in expanding access to the local and global market. At the same
+            time, ESPN also maintained its role in providing solution-based
+            services to support the corporation’s business performance, that’s
+            satisfying and beneficial for the stakeholders
           </div>
         </div>
       </div>
@@ -68,22 +64,24 @@
       <div class="row align-items-center gap-md-0 gap-3">
         <div class="col-md-4">
           <img
-            src="/assets/images/logo-elevenia-1.png"
+            src="/assets/images/elevenia-biz-yellow.png"
             class="img-fluid"
             alt=""
+            style="width: 380px;"
           />
         </div>
         <div class="col-md-8">
           <div class="font-size-16 font-weight-400">
-            e-Nusantara contributes its significant role in building up the
-            trading ecosystem of Indonesian commodities (such as spices, herbs,
-            fishery, etc.), including the derivatives as value-added, to fulfil
-            customers' demands which they have distinct requirements or
-            standards referring to their business needs and even to comply with
-            the regulations in the destination country or region. In parallel,
-            e-Nusantara collaborates with any related parties, empowering the
-            individual or group of farmers to ensure the quality of acquired
-            resources constantly at its best and well-managed.
+            After being acquired by Salim Group in 2017, PT XL Planet, which was
+            previously known as “elevenia”, a customer-to-customer (C2C) player
+            in the e-commerce industry, has made a revolutionary switch in its
+            business strategy by establishing a business-to-business (B2B)
+            services with the new brand of “elevenia.biz”. The initial idea to
+            build that new business stream was to provide corporations within
+            the group with a solution-based procurement process. However, in
+            responding to the demand in the market, elevenia.biz rapidly also
+            serves other corporations outside the group as its distinguished
+            clients
           </div>
         </div>
       </div>
@@ -94,19 +92,25 @@
             src="/assets/images/bg-enusantara.png"
             class="img-fluid"
             alt=""
+            style="width: 400px;"
           />
         </div>
         <div class="col-md-8">
           <div class="font-size-16 font-weight-400">
-            e-Nusantara contributes its significant role in building up the
-            trading ecosystem of Indonesian commodities (such as spices, herbs,
-            fishery, etc.), including the derivatives as value-added, to fulfil
-            customers' demands which they have distinct requirements or
-            standards referring to their business needs and even to comply with
-            the regulations in the destination country or region. In parallel,
-            e-Nusantara collaborates with any related parties, empowering the
-            individual or group of farmers to ensure the quality of acquired
-            resources constantly at its best and well-managed.
+            Later in the interactions with various clients, business partners,
+            and related government institutions, the Business Development team
+            identified another business opportunity that was feasible and
+            considerable to become a new business stream for the company, which
+            is the trade of local Indonesian commodities, such as spices (e.g.
+            example nutmeg and black pepper) and any other agricultural products
+            (e.g. coffee bean and organic rice). Thus, the company decides to
+            establish an inclusive trading ecosystem for Indonesian commodities
+            in the local and global markets to grow and strengthen the nation’s
+            economy under the brand of “e-Nusantara”. In this ecosystem,
+            themissions began with empowering the farmers to harvest the most
+            suitable products referring to market requirements and then involved
+            in sealing the commercial deal up until delivering the products to
+            the customers properly, either local or global.
           </div>
         </div>
       </div>
@@ -116,7 +120,7 @@
       <div class="font-size-24 font-weight-700 py-5 text-center">
         Our VMV
       </div>
-      <motto />
+      <Motto />
     </section>
 
     <section>
@@ -126,47 +130,61 @@
             <div class="font-size-24 font-weight-700 py-5 mt-5 text-center">
               Our Team
             </div>
-            <div class="d-flex gap-3 justify-content-center">
+            <div class="d-flex gap-md-0 gap-5 justify-content-center">
               <div
-                v-for="team in teams.slice(0, 4)"
-                class="teams-card"
+                v-for="team in teams.slice(4, 8)"
+                class="teams-card d-flex gap-4 align-items-center justify-content-center"
                 :key="team.id"
                 style="width: 100%; text-align: center; position: relative;"
               >
-                <img :src="team.path" alt="" style="width: 40%; height: 80%;" />
+                <div class="teams-card-img">
+                  <img :src="team.path" class="img" />
+                </div>
                 <div
-                  class="card border-0 bg-p-orange-9 card-hovered d-none position-absolute"
-                  style="top: 0px; right: -20px; z-index: 99999;"
+                  class="card border-0 bg-p-grey-43 card-hovered"
+                  style="max-height: 150px; width: 253px;"
                 >
                   <div class="card-body p-3">
-                    <div class="font-size-16 font-weight-400">
+                    <div class="font-size-14 font-weight-500">
                       {{ team.name }}
                     </div>
-                    <div class="font-size-16 font-weight-400">
-                      {{ team.code }}
+                    <div class="font-size-14 text-p-orange-14 font-weight-500">
+                      Presiden Direktur / CEO
+                    </div>
+                    <div
+                      class="font-size-14 font-weight-400 mt-3 text-p-orange-14"
+                    >
+                      “ Let’s Join Us to be a partner “
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="d-flex gap-3 justify-content-center">
+            <div class="d-flex gap-3 justify-content-center mt-4">
               <div
-                v-for="team in teams.slice(4, 8)"
-                class="teams-card"
+                v-for="team in teams.slice(0, 4)"
+                class="teams-card d-flex gap-4 align-items-center justify-content-center"
                 :key="team.id"
                 style="width: 100%; text-align: center; position: relative;"
               >
-                <img :src="team.path" alt="" style="width: 30%; height: 80%;" />
+                <div class="teams-card-img">
+                  <img :src="team.path" class="img" />
+                </div>
                 <div
-                  class="card border-0 bg-p-orange-9 card-hovered d-none position-absolute"
-                  style="top: 0px; right: -20px; z-index: 99999;"
+                  class="card border-0 bg-p-grey-43 card-hovered"
+                  style="max-height: 150px; width: 253px;"
                 >
                   <div class="card-body p-3">
-                    <div class="font-size-16 font-weight-400">
+                    <div class="font-size-14 font-weight-500">
                       {{ team.name }}
                     </div>
-                    <div class="font-size-16 font-weight-400">
-                      {{ team.code }}
+                    <div class="font-size-14 text-p-orange-14 font-weight-500">
+                      Presiden Direktur / CEO
+                    </div>
+                    <div
+                      class="font-size-14 font-weight-400 mt-3 text-p-orange-14"
+                    >
+                      “ Let’s Join Us to be a partner “
                     </div>
                   </div>
                 </div>
@@ -185,7 +203,7 @@
         <div
           class="row justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5"
         >
-          <slider :items="partners" />
+          <Slider :items="partners" />
         </div>
       </div>
     </section>
@@ -253,18 +271,37 @@ export default {
           path: "/assets/images/our-team/YOGI PRATIKNO - XLP00008.png",
         },
       ],
+      achievements: [
+        {
+          year: "2022",
+          description:
+            "PT. Elevenia Sinergi Prima Nusantara was established to further expand the business unit elevenia.biz",
+        },
+        {
+          year: "2021",
+          description: "This year, e-nusantara was inaugurated.",
+        },
+        {
+          year: "2019",
+          description:
+            "Launching of 3 subgroups from elevenia namely elvenia.biz, edts, & elevenia mart.",
+        },
+        {
+          year: "2017",
+          description: "In the middle of elevenia he joined the Salim Group",
+        },
+        {
+          year: "2014",
+          description: "Elevenia was officially launched on March 11, 2014",
+        },
+        {
+          year: "2013",
+          description:
+            "PT XL Planet was established, a joint venture between XL Axiata & SK Planet",
+        },
+      ],
     };
   },
-  computed: {
-    years() {
-      const startYear = 2023;
-      const endYear = 2019;
-      const years = [];
-      for (let year = startYear; year >= endYear; year--) {
-        years.push(year);
-      }
-      return years;
-    },
-  },
+  computed: {},
 };
 </script>
