@@ -97,7 +97,7 @@ export default {
                 },
                 {
                     name: 'Product',
-                    link: '/product'
+                    link: '/productS'
                 },
                 {
                     name: 'Contact Us',
