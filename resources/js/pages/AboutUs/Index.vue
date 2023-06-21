@@ -9,7 +9,7 @@
       "
       class="d-flex align-items-center"
     >
-      <div class="overflow-auto ms-4">
+      <div class="overflow-auto ms-4 scrollbar-none">
         <div
           class="achievement d-flex align-items-start gap-5 ps-4 pe-5 pt-md-5"
         >
