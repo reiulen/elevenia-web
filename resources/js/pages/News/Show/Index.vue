@@ -73,6 +73,7 @@
 <script>
 import axios from "axios";
 import { parseHtml, formatDate } from '@/Helper/Helpers';
+import moment from 'moment';
 export default {
     name: "Index",
     data() {
@@ -101,7 +102,7 @@ export default {
                 const res = await axios.get('/api/news/getAll?limit=3&sort=desc');
                 res.data.data.forEach((item) => {
                     item.content = parseHtml(item.content).length > 100 ? parseHtml(item.content).substring(0, 100) + '...' : parseHtml(item.content);
-                    item.created_at = formatDate(item.created_at);
+                    item.created_at = moment(item.created_at).format('YYYY, MMMM DD');
                 });
                 this.recentNews = res.data.data;
             } catch (error) {

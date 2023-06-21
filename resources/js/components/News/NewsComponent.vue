@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import { Suspense } from 'vue';
 import { parseHtml } from '@/Helper/Helpers';
 import axios from "axios";
 export default {
@@ -65,9 +64,6 @@ export default {
             }
             this.loadingNews = false;
         },
-    },
-    components: {
-        Suspense,
     },
 };
 </script>
