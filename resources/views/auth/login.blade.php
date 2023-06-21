@@ -1,48 +1,111 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-        <x-validation-errors class="mb-4" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Cikarang Lake View Premium</title>
+    <link rel="icon" type="image/png" href="/assets/gambar/logo.png" />
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/dist/css/custom.css">
+
+</head>
+
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card card-outline card-primary">
+            <div class="card-header text-center">
+                <p class="text-center">
+                    <img src="/assets/images/logo-espn.png" alt="Logo ESPN"
+                        style="height: 50px;" /></p>
             </div>
-        @endif
+            <div class="card-body">
+                <x-validation-errors class="mb-3 rounded-0" />
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="username" value="{{ __('Username') }}" />
-                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+                @if (session('status'))
+                    <div class="alert alert-success mb-3 rounded-0" role="alert">
+                        {{ session('status') }}
+                    </div>
                 @endif
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
+                    <div class="input-group mb-3">
+                        <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        <x-input-error for="username"></x-input-error>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" name="password" id="password" class="form-control"
+                            placeholder="Kata sandi" required>
+                        <div class="input-group-append" role="button" onclick="showpassword()">
+                            <div class="input-group-text">
+                                <i class="fa fa-eye-slash" id="eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck" style="font-size: 14px;">
+                                <input type="checkbox" class="remember-me mr-1" name="remember" value="1"
+                                    id="remember">
+                                <label for="remember">
+                                    Ingat Saya
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block bg-blue btn-masuk">Masuk</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
 
-                <x-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-button>
+                {{-- <p class="mb-1">
+                    <a href="/lupakatasandi">Lupa kata sandi</a>
+                </p> --}}
             </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+
+    <!-- jQuery -->
+    <script src="/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/assets/dist/js/adminlte.min.js"></script>
+    <script>
+        function showpassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+                $('#eye').addClass("fa-eye");
+                $('#eye').removeClass("fa-eye-slash");
+            } else {
+                x.type = "password";
+                $('#eye').removeClass("fa-eye");
+                $('#eye').addClass("fa-eye-slash");
+            }
+        }
+    </script>
+</body>
+
+</html>
