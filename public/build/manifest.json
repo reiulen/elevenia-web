@@ -56,7 +56,7 @@
     "src": "public/assets/images/waves-news.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-4fe2600c.css",
+    "file": "assets/app-2fe90800.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -71,14 +71,14 @@
       "assets/fa-v4compatibility-0515a423.ttf"
     ],
     "css": [
-      "assets/app-4fe2600c.css"
+      "assets/app-2fe90800.css"
     ],
-    "file": "assets/app-0422f59a.js",
+    "file": "assets/app-c54a3028.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-cb47f4fa.css",
+    "file": "assets/app-1f751337.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }
