@@ -1,6 +1,6 @@
 $('.select2').select2({});
 $(".logout").click(function () {
-    const nama = $(this).data("nama");
+    const nama = $(this).data().name;
     Swal.fire({
         title: "Do you want to logout?",
         text: ``,
@@ -12,10 +12,34 @@ $(".logout").click(function () {
         cancelButtonText: "Batal",
     }).then((result) => {
         if (result.isConfirmed) {
-            const logout = `${url}/logout`;
-            const formLogout = $('#logoutForm');
-            formLogout.attr('action', logout);
-            formLogout.submit();
+            const logout = `${url}/elevenia-admin/logout`;
+            $.ajaxSetup({
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                }
+            });
+            $.post(logout)
+                .done(function (response) {
+                // Logout berhasil
+                Swal.fire({
+                    title: "Logout Successful",
+                    text: `Goodbye, ${nama}!`,
+                    icon: "success",
+                    confirmButtonColor: "#6492b8da",
+                }).then(() => {
+                    // Redirect ke halaman login atau halaman lainnya
+                    window.location.href = "/elevenia-admin/login";
+                });
+                })
+                .fail(function (error) {
+                // Error saat melakukan logout
+                Swal.fire({
+                    title: "Logout Failed",
+                    text: "An error occurred while logging out. Please try again.",
+                    icon: "error",
+                    confirmButtonColor: "#6492b8da",
+                });
+            });
         }
     });
 });

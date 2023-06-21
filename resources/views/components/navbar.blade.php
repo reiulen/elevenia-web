@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a role="button" class="nav-link logout" data-name="">
+                <a role="button" class="nav-link logout" data-name="{{ Auth::user()->name }}">
                     <i class="fas fa-sign-out-alt text-danger"></i>
                 </a>
             </li>
