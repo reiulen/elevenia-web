@@ -17,7 +17,7 @@
                 <div class="col-md-8">
                     <figure>
                         <div class="skeleton-box radius-10 bg-p-grey-16" v-if="loaderDetail" style="height: 300px; width: 100%;"></div>
-                        <img :src="detail.thumbnail" v-else style="width: 100%;" class="img-fluid" />
+                        <img :src="`/${detail.thumbnail}`" v-else style="width: 100%;" class="img-fluid" />
                     </figure>
                     <article class="mt-4">
                         <div class="vstack gap-2" v-if="loaderDetail">
