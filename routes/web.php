@@ -6,6 +6,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\TextEditorController;
 use App\Http\Controllers\ClientPartnerController;
+use App\Http\Controllers\SejarahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,9 @@ if(explode('/', Request::path())[0] == config('fortify.prefix')) {
             Route::delete('/clientPartner/delete/{id}', [ClientPartnerController::class, 'destroy'])->name('clientPartner.destory');
             Route::get('/clientPartner/{id}', [ClientPartnerController::class, 'show'])->name('clientPartner.show');
             Route::post('clientPartner/dataTable/{type}', [ClientPartnerController::class, 'dataTable'])->name('clientPartner.dataTable');
+
+            Route::resource('/sejarah', SejarahController::class);
+            Route::post('sejarah/dataTable', [SejarahController::class, 'dataTable'])->name('sejarah.dataTable');
         });
     });
 }else {

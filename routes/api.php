@@ -3,6 +3,7 @@
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ClientPartnerController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SejarahController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +33,8 @@ Route::group(['prefix' => 'career', 'as' => 'career.'], function() {
 
 Route::group(['prefix' => 'clientPartner', 'as' => 'clientPartner.'], function() {
     Route::get('/{type}', [ClientPartnerController::class, 'getAll'])->name('getData');
+});
+
+Route::group(['prefix' => 'sejarah', 'as' => 'sejarah.'], function() {
+    Route::get('/getAll', [SejarahController::class, 'getAll'])->name('getData');
 });

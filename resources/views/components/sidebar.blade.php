@@ -14,7 +14,7 @@
                 role="menu" data-accordion="false">
                 <li class="nav-header text-bold mb-2">Dashboard</li>
                 <li
-                    class="nav-item nav-item {{ set_menu_open(['news.index', 'news.create', 'news.edit', 'career.index', 'partner.index', 'client.index',]) }}">
+                    class="nav-item nav-item {{ set_menu_open(['news.index', 'news.create', 'news.edit', 'career.index', 'partner.index', 'client.index', 'sejarah.index']) }}">
                     <a href="#" class="nav-link bg-white " style="border-radius: 8px">
                         <p>
                             {{ __('ESPN') }}
@@ -44,6 +44,12 @@
                             <a href="{{ route('partner.index') }}" class="nav-link {{ set_active_sub(['partner.index']) }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>{{ __('Partner') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('sejarah.index') }}" class="nav-link {{ set_active_sub(['sejarah.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Sejarah') }}</p>
                             </a>
                         </li>
                     </ul>

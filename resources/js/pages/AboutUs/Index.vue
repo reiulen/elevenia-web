@@ -260,40 +260,13 @@ export default {
           path: "/assets/images/our-team/YOGI PRATIKNO - XLP00008.png",
         },
       ],
-      achievements: [
-        {
-          year: "2022",
-          description:
-            "PT. Elevenia Sinergi Prima Nusantara was established to further expand the business unit elevenia.biz",
-        },
-        {
-          year: "2021",
-          description: "This year, e-nusantara was inaugurated.",
-        },
-        {
-          year: "2019",
-          description:
-            "Launching of 3 subgroups from elevenia namely elvenia.biz, edts, & elevenia mart.",
-        },
-        {
-          year: "2017",
-          description: "In the middle of elevenia he joined the Salim Group",
-        },
-        {
-          year: "2014",
-          description: "Elevenia was officially launched on March 11, 2014",
-        },
-        {
-          year: "2013",
-          description:
-            "PT XL Planet was established, a joint venture between XL Axiata & SK Planet",
-        },
-      ],
+      achievements: [],
       loadingPartner: false,
     };
   },
   mounted() {
         this.getPartner();
+        this.getSejarah();
     },
     methods: {
         async getPartner() {
@@ -301,6 +274,12 @@ export default {
             const res = await axios.get('/api/clientPartner/partner');
             this.partners = res.data.data;
             this.loadingPartner = false;
+        },
+        async getSejarah() {
+            this.loadingSejarah = true;
+            const res = await axios.get('/api/sejarah/getAll');
+            this.achievements = res.data.data;
+            this.loadingSejarah = false;
         }
     }
 };
