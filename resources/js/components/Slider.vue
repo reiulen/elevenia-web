@@ -8,15 +8,16 @@
       disableOnInteraction: false,
     }"
     class="mySwiper"
+    wrapperClass="justify-content-center align-items-center"
   >
     <swiper-slide v-for="partner in items" :key="partner.id">
       <div>
-        <div>
-          <img :src="partner.logo" alt="partner logo" style="height: 160px;" />
+        <div class="mb-3">
+          <img :src="partner.image" alt="partner logo" style="height: 160px;" />
         </div>
-        <div>
-          <img :src="partner.logo" alt="partner logo" style="height: 160px;" />
-        </div>
+        <!-- <div>
+          <img :src="partner.image" alt="partner logo" style="height: 160px;" />
+        </div> -->
       </div>
     </swiper-slide>
   </swiper>

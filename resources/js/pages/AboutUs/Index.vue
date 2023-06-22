@@ -221,18 +221,7 @@ export default {
   name: "Home",
   data() {
     return {
-      partners: [
-        { id: 1, logo: "/assets/images/client.png" },
-        { id: 2, logo: "/assets/images/client.png" },
-        { id: 3, logo: "/assets/images/client.png" },
-        { id: 4, logo: "/assets/images/client.png" },
-        { id: 5, logo: "/assets/images/client.png" },
-        { id: 6, logo: "/assets/images/client.png" },
-        { id: 7, logo: "/assets/images/client.png" },
-        { id: 8, logo: "/assets/images/client.png" },
-        { id: 9, logo: "/assets/images/client.png" },
-        { id: 10, logo: "/assets/images/client.png" },
-      ],
+      partners: [],
       teams: [
         {
           name: "Fernandi Mahendrasusila",
@@ -300,8 +289,19 @@ export default {
             "PT XL Planet was established, a joint venture between XL Axiata & SK Planet",
         },
       ],
+      loadingPartner: false,
     };
   },
-  computed: {},
+  mounted() {
+        this.getPartner();
+    },
+    methods: {
+        async getPartner() {
+            this.loadingPartner = true;
+            const res = await axios.get('/api/clientPartner/partner');
+            this.partners = res.data.data;
+            this.loadingPartner = false;
+        }
+    }
 };
 </script>

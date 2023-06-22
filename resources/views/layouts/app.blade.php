@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title> {{ $title }} | APLIKASI LAPORAN HAWASBID PENGADILAN AGAMA CIREBON</title>
+    <title> {{ $title }} | ESPN</title>
     <link rel="icon" type="image/png" href="" />
 
     <!-- Font Google -->

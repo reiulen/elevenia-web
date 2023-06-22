@@ -55,7 +55,7 @@
             <div class="text-center font-weight-700 font-size-24">
                 Our Distinguished Clients
             </div>
-            <div class="row justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
+            <div class="d-flex justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
                 <Slider :items="clients" />
             </div>
         </div>
@@ -93,18 +93,16 @@ export default {
                     description: "We dispatch the products to your business-designated address"
                 }
             ],
-            clients: [
-                { id: 1, logo: '/assets/images/client.png' },
-                { id: 2, logo: '/assets/images/client.png' },
-                { id: 3, logo: '/assets/images/client.png' },
-                { id: 4, logo: '/assets/images/client.png' },
-                { id: 5, logo: '/assets/images/client.png' },
-                { id: 6, logo: '/assets/images/client.png' },
-                { id: 7, logo: '/assets/images/client.png' },
-                { id: 8, logo: '/assets/images/client.png' },
-                { id: 9, logo: '/assets/images/client.png' },
-                { id: 10, logo: '/assets/images/client.png' },
-            ],
+            clients: [],
+        }
+    },
+    mounted() {
+        this.getClients();
+    },
+    methods: {
+        async getClients() {
+            const res = await axios.get('/api/clientPartner/client');
+            this.clients = res.data.data;
         }
     }
 };

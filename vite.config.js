@@ -21,17 +21,17 @@ export default defineConfig({
             input: ['resources/sass/app.scss', 'resources/js/app.js'],
             refresh: true,
         }),
-        // {
-        //     name: 'blade',
-        //     handleHotUpdate({ file, server }) {
-        //         if (file.endsWith('.vue')) {
-        //             server.ws.send({
-        //                 type: 'full-reload',
-        //                 path: '*',
-        //             });
-        //         }
-        //     },
-        // }
+        {
+            name: 'blade',
+            handleHotUpdate({ file, server }) {
+                if (file.endsWith('.vue')) {
+                    server.ws.send({
+                        type: 'full-reload',
+                        path: '*',
+                    });
+                }
+            },
+        }
     ],
     resolve: {
         alias: {

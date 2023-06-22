@@ -14,7 +14,7 @@
                 role="menu" data-accordion="false">
                 <li class="nav-header text-bold mb-2">Dashboard</li>
                 <li
-                    class="nav-item nav-item {{ set_menu_open(['news.index', 'news.create', 'news.edit']) }}">
+                    class="nav-item nav-item {{ set_menu_open(['news.index', 'news.create', 'news.edit', 'career.index', 'partner.index', 'client.index',]) }}">
                     <a href="#" class="nav-link bg-white " style="border-radius: 8px">
                         <p>
                             {{ __('ESPN') }}
@@ -26,6 +26,24 @@
                             <a href="{{ route('news.index') }}" class="nav-link {{ set_active_sub(['news.index']) }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>{{ __('News') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('career.index') }}" class="nav-link {{ set_active_sub(['career.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Career') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('client.index') }}" class="nav-link {{ set_active_sub(['client.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Client') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('partner.index') }}" class="nav-link {{ set_active_sub(['partner.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Partner') }}</p>
                             </a>
                         </li>
                     </ul>

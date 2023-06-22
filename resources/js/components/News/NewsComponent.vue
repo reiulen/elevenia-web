@@ -11,7 +11,7 @@
                 <div class="font-weight-400 font-size-14 mt-2">
                     <div class="skeleton-box rounded bg-p-grey-16" style="height: 18px; width: 100%;"></div>
                 </div>
-                <div class="skeleton-box rounded bg-p-grey-16 mt-4" style="height: 45px; width: 100%;"></div>
+                <div clasds="skeleton-box rounded bg-p-grey-16 mt-4" style="height: 45px; width: 100%;"></div>
             </div>
         </router-link>
     </div>
@@ -33,6 +33,14 @@
                 </router-link>
             </div>
         </router-link>
+    </div>
+    <div v-if="news.length < 1" class="d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <img src="/assets/images/empty-data.svg" style="height: 250px;" />
+            <div class="font-weight-500 font-size-20">
+               No found news
+            </div>
+        </div>
     </div>
 </template>
 

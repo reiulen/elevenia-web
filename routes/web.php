@@ -1,8 +1,11 @@
 <?php
 
-use App\Http\Controllers\NewsController;
-use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CareerController;
+use App\Http\Controllers\TextEditorController;
+use App\Http\Controllers\ClientPartnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +35,19 @@ if(explode('/', Request::path())[0] == config('fortify.prefix')) {
             Route::resource('news', NewsController::class);
             Route::post('news/dataTable', [NewsController::class, 'dataTable'])->name('news.dataTable');
 
+            Route::resource('career', CareerController::class);
+            Route::post('career/dataTable', [CareerController::class, 'dataTable'])->name('career.dataTable');
+
             Route::group(['prefix' => 'textEditor'], function() {
                 Route::post('/uploadPhoto',  [TextEditorController::class, 'uploadPhoto'])->name('uploadPhoto');
                 Route::post('/deletePhoto',  [TextEditorController::class, 'deletePhoto'])->name('deletePhoto');
             });
+
+            Route::resource('partner', ClientPartnerController::class);
+            Route::resource('client', ClientPartnerController::class);
+            Route::delete('/clientPartner/delete/{id}', [ClientPartnerController::class, 'destroy'])->name('clientPartner.destory');
+            Route::get('/clientPartner/{id}', [ClientPartnerController::class, 'show'])->name('clientPartner.show');
+            Route::post('clientPartner/dataTable/{type}', [ClientPartnerController::class, 'dataTable'])->name('clientPartner.dataTable');
         });
     });
 }else {
