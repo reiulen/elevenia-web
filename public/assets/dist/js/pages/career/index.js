@@ -76,6 +76,6 @@ table.on("click", ".btn-hapus", function (e) {
     e.preventDefault();
     const id = $(this).data("id");
     const nama = $(this).data("title");
-    const urlTarget = `${url}/admin/blog/artikel/${id}`
+    const urlTarget = `${url}/elevenia-admin/career/${id}`
     deleteDataTable(nama, urlTarget, table)
 });
