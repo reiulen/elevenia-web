@@ -172,14 +172,18 @@ class SejarahController extends Controller
 
     public function getAll(Request $request)
     {
-        $data = Sejarah::select('id', 'year', 'description', 'created_at')
-                            ->latest();
+        $data = Sejarah::select('id', 'year', 'description', 'created_at');
 
         if(isset($request->paginate))
             $data = $data->paginate($request->paginate)->toArray();
 
         if(isset($request->limit))
             $data = $data->limit($request->limit)->get();
+
+         if($request->orderBy) {
+            $orderBy = explode('|', $request->orderBy);
+            $data = $data->orderBy($orderBy[0], $orderBy[1]);
+        }else $data = $data->latest();
 
         if(empty($request->paginate) && empty($request->limit))
             $data = $data->get();

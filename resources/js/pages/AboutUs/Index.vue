@@ -277,7 +277,7 @@ export default {
         },
         async getSejarah() {
             this.loadingSejarah = true;
-            const res = await axios.get('/api/sejarah/getAll');
+            const res = await axios.get('/api/sejarah/getAll?orderBy=year|asc');
             this.achievements = res.data.data;
             this.loadingSejarah = false;
         }
