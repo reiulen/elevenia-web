@@ -56,7 +56,14 @@
                 Our Distinguished Clients
             </div>
             <div class="d-flex justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
-                <Slider :items="clients" />
+                <div v-if="loaderClients" class="row align-items-center justify-content-center">
+                    <div class="col-2 g-4" v-for="n in 12">
+                        <div class="px-4">
+                            <div class="skeleton-box bg-p-grey-16 radius-12" style="height: 100px; width: 180px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <Slider v-else="clients.length > 0" :items="clients" />
             </div>
         </div>
     </section>
@@ -94,6 +101,7 @@ export default {
                 }
             ],
             clients: [],
+            loaderClients: false
         }
     },
     mounted() {
@@ -101,8 +109,14 @@ export default {
     },
     methods: {
         async getClients() {
-            const res = await axios.get('/api/clientPartner/client');
-            this.clients = res.data.data;
+            this.loaderClients = true;
+            try {
+                const res = await axios.get('/api/clientPartner/partner');
+                this.clients = res.data.data;
+            }catch(err) {
+                console.log(err);
+            }
+            this.loaderClients = false;
         }
     }
 };

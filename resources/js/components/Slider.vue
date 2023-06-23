@@ -1,26 +1,26 @@
 <template>
-  <swiper
-    :slidesPerView="slidesPerView"
-    :modules="modules"
-    :loop="true"
-    :autoplay="{
-      delay: 2500,
-      disableOnInteraction: false,
-    }"
-    class="mySwiper"
-    wrapperClass="justify-content-center align-items-center"
-  >
-    <swiper-slide v-for="partner in items" :key="partner.id">
-      <div>
-        <div class="mb-3">
-          <img :src="partner.image" alt="partner logo" style="height: 160px;" />
+    <div class="container px-4">
+        <swiper v-if="data.length > 0" class="mySwiper">
+            <swiper-slide v-for="(itemClient, index) in dataClientPartner">
+                <div class="row align-items-center justify-content-center" :key="index">
+                    <div class="col-md-2 col-4 gy-4" v-for="(item, index) in itemClient" :key="item.id">
+                        <div class="px-4">
+                            <img :src="`https://elevenia.srijihan.my.id/${item.image}`" alt="partner logo" class="img-fluid"
+                                style="max-height: 150px; width: 190px;" />
+                        </div>
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper>
+        <div v-if="data.length < 1" class="d-flex align-items-center justify-content-center">
+            <div class="text-center mt-5">
+                <img src="/assets/images/empty-data.svg" style="height: 250px;" />
+                <div class="font-weight-500 font-size-20">
+                    No found client partner
+                </div>
+            </div>
         </div>
-        <!-- <div>
-          <img :src="partner.image" alt="partner logo" style="height: 160px;" />
-        </div> -->
-      </div>
-    </swiper-slide>
-  </swiper>
+    </div>
 </template>
 
 <script>
@@ -32,48 +32,50 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true,
+    props: ["items"],
+    components: {
+        Swiper,
+        SwiperSlide,
     },
-  },
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  data() {
-    return {
-      widthSize: "",
-      slidesPerView: 6,
-    };
-  },
-  mounted() {
-    this.updateWindowWidth();
-    window.addEventListener("resize", this.updateWindowWidth);
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.updateWindowWidth);
-  },
-  methods: {
-    updateWindowWidth() {
-      this.widthSize = window.innerWidth;
-      if (this.widthSize >= 992) this.slidesPerView = 6;
-      else if (this.widthSize >= 767) this.slidesPerView = 5;
-      else if (this.widthSize >= 537) this.slidesPerView = 4;
-      else  if(this.widthSize >= 380) this.slidesPerView = 3;
-      else this.slidesPerView = 2;
+    data() {
+        return {
+            widthSize: "",
+            slidesPerView: 6,
+            dataClientPartner: [],
+            data: [],
+        };
     },
-  },
-  setup() {
-    return {
-      modules: [Autoplay],
-    };
-  },
+    mounted() {
+        this.data = this.items;
+        this.filterData();
+        this.updateWindowWidth();
+        window.addEventListener("resize", this.updateWindowWidth);
+    },
+    beforeDestroy() {
+        window.removeEventListener("resize", this.updateWindowWidth);
+    },
+    methods: {
+        updateWindowWidth() {
+        },
+        filterData() {
+            this.items.reduce((result, item, index) => {
+                if (index % 12 === 0) {
+                    this.dataClientPartner.push([]);
+                }
+                this.dataClientPartner[Math.floor(index / 12)].push(item);
+                return result;
+            }, []);
+        }
+    },
+    setup() {
+        return {
+            modules: [Autoplay],
+        };
+    },
 };
 </script>
 
-<style>
+<!-- <style>
 .swiper {
   width: 100%;
   height: 100%;
@@ -92,4 +94,4 @@ export default {
   height: 100%;
   object-fit: cover;
 }
-</style>
+</style> -->

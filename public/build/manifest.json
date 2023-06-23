@@ -56,7 +56,7 @@
     "src": "public/assets/images/waves-news.svg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-2fe90800.css",
+    "file": "assets/app-7b34ffdb.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -71,9 +71,9 @@
       "assets/fa-v4compatibility-0515a423.ttf"
     ],
     "css": [
-      "assets/app-2fe90800.css"
+      "assets/app-7b34ffdb.css"
     ],
-    "file": "assets/app-b9feb5bd.js",
+    "file": "assets/app-4a94c279.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
