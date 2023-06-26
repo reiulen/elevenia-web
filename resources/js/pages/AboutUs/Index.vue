@@ -163,7 +163,7 @@
                     Our Valuable Partners
                 </div>
                 <div class="row justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
-                    <div v-if="loadingPartner" class="row align-items-center justify-content-center">
+                    <div v-if="loaderPartner" class="row align-items-center justify-content-center">
                         <div class="col-2 g-4" v-for="n in 12">
                             <div class="px-4">
                                 <div class="skeleton-box bg-p-grey-16 radius-12" style="height: 100px; width: 180px;"></div>
