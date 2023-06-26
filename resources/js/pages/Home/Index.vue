@@ -111,7 +111,7 @@ export default {
         async getClients() {
             this.loaderClients = true;
             try {
-                const res = await axios.get('/api/clientPartner/partner');
+                const res = await axios.get('/api/clientPartner/client');
                 this.clients = res.data.data;
             }catch(err) {
                 console.log(err);
