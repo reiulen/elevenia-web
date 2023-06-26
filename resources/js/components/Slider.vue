@@ -5,7 +5,7 @@
                 <div class="row align-items-center justify-content-center" :key="index">
                     <div class="col-md-2 col-4 gy-4" v-for="(item, index) in itemClient" :key="item.id">
                         <div class="px-4">
-                            <img :src="`https://elevenia.srijihan.my.id/${item.image}`" alt="partner logo" class="img-fluid"
+                            <img :src="`/${item.image}`" alt="partner logo" class="img-fluid"
                                 style="max-height: 150px; width: 190px;" />
                         </div>
                     </div>
