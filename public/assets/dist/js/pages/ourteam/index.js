@@ -131,6 +131,6 @@ table.on("click", ".btn-hapus", function (e) {
     e.preventDefault();
     let id = $(this).data("id");
     let nama = $(this).data("nama");
-    let urlTarget = `${url}/elevenia-admin/clientPartner/delete/${id}`;
+    let urlTarget = `${url}/elevenia-admin/our-team/${id}`;
     deleteDataTable(nama, urlTarget, table)
 });
