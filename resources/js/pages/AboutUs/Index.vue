@@ -139,10 +139,10 @@
                             </template>
                         </div>
                         <div v-if="teams.length < 1" class="d-flex align-items-center justify-content-center">
-                            <div class="text-center mt-5">
+                            <div class="text-center">
                                 <img src="/assets/images/empty-data.svg" style="height: 250px;" />
                                 <div class="font-weight-500 font-size-20">
-                                    No found client partner
+                                    No found our team
                                 </div>
                             </div>
                         </div>
