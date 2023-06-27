@@ -156,7 +156,7 @@
                 <div class="text-center font-weight-700 font-size-24">
                     Our Valuable Partners
                 </div>
-                <div class="row justify-content-center align-items-center pt-md-5 pt-4 pb-5 px-xl-5 g-md-5">
+                <div class="row justify-content-center align-items-center mt-md-4 mt-3 mb-5 px-xl-5 g-md-5">
                     <div v-if="loaderPartner" class="row align-items-center justify-content-center">
                         <div class="col-2 g-4" v-for="n in 12">
                             <div class="px-4">
