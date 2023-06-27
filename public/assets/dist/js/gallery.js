@@ -1,7 +1,7 @@
 const imgPreview = $(".img-preview");
 
 imgPreview.on("change", "input[type='file']", function () {
-    if(this.files[0].size > 2000000) {
+    if(this.files[0].size > 8000000) {
         alert('Ukuran file terlalu besar');
         sampul.val('');
         return false;

@@ -6,6 +6,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\TextEditorController;
 use App\Http\Controllers\ClientPartnerController;
+use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\SejarahController;
 
 /*
@@ -52,6 +53,10 @@ if(explode('/', Request::path())[0] == config('fortify.prefix')) {
 
             Route::resource('/sejarah', SejarahController::class);
             Route::post('sejarah/dataTable', [SejarahController::class, 'dataTable'])->name('sejarah.dataTable');
+
+            Route::resource('/our-team', OurTeamController::class);
+            Route::post('our-team/dataTable', [OurTeamController::class, 'dataTable'])->name('ourTeam.dataTable');
+
         });
     });
 }else {

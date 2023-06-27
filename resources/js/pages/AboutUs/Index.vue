@@ -106,49 +106,43 @@
                         <div class="font-size-24 font-weight-700 py-5 mt-5 text-center">
                             Our Team
                         </div>
-                        <div class="d-flex gap-md-0 gap-5 justify-content-center">
-                            <div v-for="team in teams.slice(4, 8)"
-                                class="teams-card d-flex gap-4 align-items-center justify-content-center" :key="team.id"
+                        <div v-if="loaderOurTeam" class="d-flex gap-md-0 gap-5 justify-content-center">
+                            <div v-for="n in 4" class="teams-card d-flex gap-4 align-items-center justify-content-center"
                                 style="width: 100%; text-align: center; position: relative;">
-                                <div class="teams-card-img">
-                                    <img :src="team.path" class="img" />
-                                </div>
-                                <div class="card border-0 bg-p-grey-43 card-hovered"
-                                    style="max-height: 150px; width: 253px;">
-                                    <div class="card-body p-3">
-                                        <div class="font-size-14 font-weight-500">
-                                            {{ team.name }}
-                                        </div>
-                                        <div class="font-size-14 text-p-orange-14 font-weight-500">
-                                            Presiden Direktur / CEO
-                                        </div>
-                                        <div class="font-size-14 font-weight-400 mt-3 text-p-orange-14">
-                                            “ Let’s Join Us to be a partner “
-                                        </div>
-                                    </div>
+                                <div class="">
+                                    <div class="skeleton-box bg-p-grey-16 radius-12" style="height: 190px; width: 160px;"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex gap-3 justify-content-center mt-4">
-                            <div v-for="team in teams.slice(0, 4)"
-                                class="teams-card d-flex gap-4 align-items-center justify-content-center" :key="team.id"
-                                style="width: 100%; text-align: center; position: relative;">
-                                <div class="teams-card-img">
-                                    <img :src="team.path" class="img" />
-                                </div>
-                                <div class="card border-0 bg-p-grey-43 card-hovered"
-                                    style="max-height: 150px; width: 253px;">
-                                    <div class="card-body p-3">
-                                        <div class="font-size-14 font-weight-500">
-                                            {{ team.name }}
-                                        </div>
-                                        <div class="font-size-14 text-p-orange-14 font-weight-500">
-                                            Presiden Direktur / CEO
-                                        </div>
-                                        <div class="font-size-14 font-weight-400 mt-3 text-p-orange-14">
-                                            “ Let’s Join Us to be a partner “
+                        <div v-else-if="teams.length > 0" v-for="(team, indexTeam) in groupedTeams" :key="indexTeam" class="d-flex gap-md-0 gap-5 justify-content-center">
+                            <template v-for="(item, index) in team" :key="index">
+                                <div class="teams-card d-flex gap-4 align-items-center justify-content-center"
+                                    style="width: 100%; text-align: center; position: relative;">
+                                    <div class="teams-card-img">
+                                        <img :src="`/${item.image}`" class="img" />
+                                    </div>
+                                    <div class="card border-0 bg-p-grey-43 card-hovered"
+                                        style="max-height: 150px; width: 253px;">
+                                        <div class="card-body p-3">
+                                            <div class="font-size-14 font-weight-500">
+                                                {{ item.name }}
+                                            </div>
+                                            <div class="font-size-14 text-p-orange-14 font-weight-500">
+                                                {{ item.position }}
+                                            </div>
+                                            <div class="font-size-14 font-weight-400 mt-3 text-p-orange-14">
+                                                “ {{ item.quote }} “
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                            </template>
+                        </div>
+                        <div v-if="teams.length < 1" class="d-flex align-items-center justify-content-center">
+                            <div class="text-center mt-5">
+                                <img src="/assets/images/empty-data.svg" style="height: 250px;" />
+                                <div class="font-weight-500 font-size-20">
+                                    No found client partner
                                 </div>
                             </div>
                         </div>
@@ -162,7 +156,7 @@
                 <div class="text-center font-weight-700 font-size-24">
                     Our Valuable Partners
                 </div>
-                <div class="row justify-content-center align-items-center pt-4 pb-5 px-xl-5 g-md-5">
+                <div class="row justify-content-center align-items-center pt-md-5 pt-4 pb-5 px-xl-5 g-md-5">
                     <div v-if="loaderPartner" class="row align-items-center justify-content-center">
                         <div class="col-2 g-4" v-for="n in 12">
                             <div class="px-4">
@@ -189,51 +183,17 @@ export default {
     data() {
         return {
             partners: [],
-            teams: [
-                {
-                    name: "Fernandi Mahendrasusila",
-                    code: "XLP00248",
-                    path:
-                        "/assets/images/our-team/FERNANDI MAHENDRASUSILA - XLP00248.png",
-                },
-                {
-                    name: "Hendra Gunawan",
-                    code: "XLP00013",
-                    path: "/assets/images/our-team/HENDRA GUNAWAN - XLP00013.png",
-                },
-                {
-                    name: "Ivan Jonatan",
-                    code: "XLP00014",
-                    path: "/assets/images/our-team/IVAN JONATAN.png",
-                },
-                {
-                    name: "Monika Ferolina S",
-                    code: "XLP00597",
-                    path: "/assets/images/our-team/Monika Ferolina S - XLP00597.png",
-                },
-                {
-                    name: "SUGIHARTO DARMAKUSUMA",
-                    code: "XLP00001",
-                    path: "/assets/images/our-team/SUGIHARTO DARMAKUSUMA - XLP00001.png",
-                },
-                {
-                    name: "TRIANITA HESTI",
-                    code: "XLP00659",
-                    path: "/assets/images/our-team/TRIANITA HESTI - XLP00659.png",
-                },
-                {
-                    name: "YOGI PRATIKNO",
-                    code: "XLP00008",
-                    path: "/assets/images/our-team/YOGI PRATIKNO - XLP00008.png",
-                },
-            ],
+            teams: [],
             achievements: [],
             loaderPartner: false,
+            groupedTeams: [],
+            loaderOurTeam: false,
         };
     },
     mounted() {
         this.getPartner();
         this.getSejarah();
+        this.getOurTeam();
     },
     methods: {
         async getPartner() {
@@ -241,7 +201,7 @@ export default {
             try {
                 const res = await axios.get('/api/clientPartner/partner');
                 this.partners = res.data.data;
-            }catch(err) {
+            } catch (err) {
                 console.log(err);
             }
             this.loaderPartner = false;
@@ -251,7 +211,34 @@ export default {
             const res = await axios.get('/api/sejarah/getAll?orderBy=year|asc');
             this.achievements = res.data.data;
             this.loadingSejarah = false;
-        }
+        },
+        async getOurTeam() {
+            this.loaderOurTeam = true;
+            try {
+                const res = await axios.get('/api/ourTeam/getAll');
+                this.teams = res.data.data;
+                this.groupedTeams = this.groupTeams(this.teams);
+            } catch (err) {
+                console.log(err);
+            }
+            this.loaderOurTeam = false;
+        },
+        groupTeams(teams) {
+            const grouped = [];
+            let startIndex = 0;
+
+            // Mengelompokkan grup pertama dengan tiga index pertama
+            grouped.push(teams.slice(startIndex, startIndex + 3));
+            startIndex += 3;
+
+            // Mengelompokkan grup kedua dan seterusnya dengan empat index
+            while (startIndex < teams.length) {
+                grouped.push(teams.slice(startIndex, startIndex + 4));
+                startIndex += 4;
+            }
+
+            return grouped;
+        },
     }
 };
 </script>
