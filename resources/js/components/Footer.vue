@@ -42,7 +42,7 @@
                                 <img src="/assets/images/icons/location.svg" />
                             </td>
                             <td>
-                                Wisma 46-Kota BNI, Lantai 39, Jl. Jendral Sudirman Kav. 1
+                                {{ setting['location_contact_us'] }}
                             </td>
                         </tr>
                         <tr>
@@ -50,7 +50,7 @@
                                 <img class="me-2" src="/assets/images/icons/call.svg" />
                             </td>
                             <td>
-                                02139371122
+                                {{ setting['phone_contact_us'] }}
                             </td>
                         </tr>
                         <tr>
@@ -58,7 +58,7 @@
                                 <img class="me-2" src="/assets/images/icons/mail.svg" />
                             </td>
                             <td>
-                                corporate.secretary@elevenia.co.id
+                                {{ setting['email_contact_us'] }}
                             </td>
                         </tr>
                     </table>
@@ -73,6 +73,7 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    props: ['setting']
 }
 </script>

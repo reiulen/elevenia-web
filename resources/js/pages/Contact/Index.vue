@@ -1,22 +1,19 @@
 <template>
   <section class="hero">
     <div class="image-hero position-relative">
-      <img src="/assets/images/contact-us-hero.png" style="width: 100%;" />
+      <img :src="`/${$root.setting['image_header_contact_us']}`" style="width: 100%;" />
       <div>
         <div
           class="position-absolute text-white font-weight-500 font-size-xl-30 font-size-md-28 font-size-md-18 font-size-sm-18 font-size-10"
           style="top: 40%; right: 8%;"
+          v-html="$root.setting['quote_contact_us']"
         >
-          Have any
-          <span class="font-weight-700 font-size-xl-45">Inquiry</span>
-          or Need further <br />
-          <span class="font-weight-700 font-size-xl-45">Information</span>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <div class="container">
+    <div class="container-lg">
       <div class="font-size-48 font-weight-700 pt-5">
         Contact Us
       </div>
@@ -35,20 +32,19 @@
                     <div class="font-size-18 font-weight-700">
                       Phone
                       <div class="font-size-15 font-weight-400">
-                        02139371122
+                        {{ $root.setting['phone_contact_us'] }}
                       </div>
                     </div>
                     <div class="font-size-18 font-weight-700">
                       Email
                       <div class="font-size-15 font-weight-400">
-                        corporate.secretary@elevenia.co.id
+                        {{ $root.setting['email_contact_us'] }}
                       </div>
                     </div>
                     <div class="font-size-18 font-weight-700">
                       Location
                       <div class="font-size-15 font-weight-400">
-                        Wisma 46-Kota BNI, Lantai 39, Jl. Jendral Sudirman Kav.
-                        1
+                        {{ $root.setting['location_contact_us'] }}
                       </div>
                     </div>
                   </div>
@@ -69,7 +65,7 @@
             <div class="col-md-6">
               <div class="card bg-p-grey-43 border-0 radius-20">
                 <div class="card-body p-md-5 p-3">
-                  <form>
+                  <form @submit.prevent="submitForm">
                     <div class="form-group mb-4">
                       <label>
                         <div class="font-size-18 font-weight-400 mb-2">
@@ -77,10 +73,13 @@
                         </div>
                       </label>
                       <input
+                        required
                         type="text"
                         class="form-control radius-20 bg-p-orange-13"
+                        v-model="form.name"
                         style="min-height: 50px;"
                       />
+                      <span v-if="validationErrors.name" v-for="(item,key) in validationErrors.name" :key="key" class="text-danger">{{ item }}</span>
                     </div>
                     <div class="form-group mb-4">
                       <label>
@@ -89,10 +88,14 @@
                         </div>
                       </label>
                       <input
-                        type="text"
+                        required
+                        type="email"
                         class="form-control radius-20 bg-p-orange-13"
+                        v-model="form.email"
                         style="min-height: 50px;"
+
                       />
+                      <span v-if="validationErrors.email" v-for="(item,key) in validationErrors.email" :key="key" class="text-danger">{{ item }}</span>
                     </div>
 
                     <div class="form-group mb-4">
@@ -102,10 +105,13 @@
                         </div>
                       </label>
                       <input
+                        required
                         type="text"
                         class="form-control radius-20 bg-p-orange-13"
+                        v-model="form.subject"
                         style="min-height: 50px;"
                       />
+                      <span v-if="validationErrors.subject" v-for="(item,key) in validationErrors.subject" :key="key" class="text-danger">{{ item }}</span>
                     </div>
 
                     <div class="form-group mb-4">
@@ -116,8 +122,11 @@
                       </label>
                       <textarea
                         rows="8"
-                        class="form-control radius-20 bg-p-orange-13 p-4"
+                        class="form-control radius-20 bg-p-orange-13 p-4 border-0"
+                        v-model="form.message"
+                        required
                       ></textarea>
+                      <span v-if="validationErrors.message" v-for="(item,key) in validationErrors.message" :key="key" class="text-danger">{{ item }}</span>
                     </div>
 
                     <div class="text-center">
@@ -137,7 +146,55 @@
 </template>
 
 <script>
+import axios from "axios";
+import Swal from 'sweetalert2';
+
 export default {
   name: "ContactIndex",
+  data() {
+    return {
+        form: {
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+        },
+        validationErrors: {},
+    };
+  },
+  mounted() {
+
+  },
+  methods: {
+    async submitForm() {
+        const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+        if(!emailRegex.test(this.form.email)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Email is not valid!',
+            });
+            return;
+        }
+        try {
+            const res = await axios.post('/api/contact-us', this.form);
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: res.data.message,
+            });
+            this.form = {
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+            };
+        }catch(e) {
+            console.log(e.response);
+            if(e.response.status === 400)
+                this.validationErrors = e.response.data.message;
+        }
+    }
+  },
 };
 </script>

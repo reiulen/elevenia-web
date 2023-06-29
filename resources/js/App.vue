@@ -2,7 +2,7 @@
   <component :is="this.$route.meta.layout || 'div'">
     <Navbar />
     <router-view />
-    <Footer />
+    <Footer :setting="setting" />
     <section>
       <button class="btn btn-p-orange-10 back-to-top" @click="scrollToTop" v-show="showButton">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-arrow-up-filled" width="24"
@@ -25,20 +25,30 @@ export default {
   name: "App",
   components: {
     Navbar,
-    Footer
+    Footer,
   },
   data() {
     return {
-      showButton: false
+      showButton: false,
+      setting: [],
     };
   },
   mounted() {
+    this.getSetting();
     window.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    async getSetting() {
+        try {
+            const { data } = await axios.get('/api/setting');
+            this.setting = data?.data;
+        } catch (error) {
+            console.log(error);
+        }
+    },
     handleScroll() {
       this.showButton = window.pageYOffset > 0;
     },

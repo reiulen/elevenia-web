@@ -1,14 +1,10 @@
 <template>
     <section class="hero">
         <div class="image-hero position-relative">
-            <img src="/assets/images/bg-header.png" style="width: 100%;" />
+            <img :src="`/${$root.setting['image_header_home']}`" style="width: 100%;" />
             <div>
-                <div class="position-absolute text-white font-size-xl-21 font-size-lg-18 font-size-md-14 font-size-sm-11 font-size-6"
+                <div v-html="$root.setting['quote_home']" class="position-absolute text-white font-size-xl-21 font-size-lg-18 font-size-md-14 font-size-sm-11 font-size-6"
                     style="top: 40%; right: 5%">
-                    We <b>ENGAGE</b> our business in the <br />
-                    <b>modern trade of local Indonesian commodities</b><br />
-                    and provide corporations with a <br />
-                    <b>one-stop solutions-base procurementprocess</b>
                 </div>
                 <div class="position-absolute text-white font-size-xl-21 font-size-lg-18 font-size-md-14 font-size-sm-11 font-size-6"
                     style="top: 73%; right: 2%">
@@ -46,7 +42,12 @@
                 Way We Do Business
             </div>
             <div class="row justify-content-center align-items-center py-5 px-xl-5 g-md-5 gy-4">
-                <BusinessComponent :data="data" />
+                <div v-if="loaderBusiness" class="col-4" v-for="n in 3">
+                    <div class="px-4">
+                        <div class="skeleton-box bg-p-grey-16 radius-12" style="height: 350px; width: 340px;"></div>
+                    </div>
+                </div>
+                <BusinessComponent v-else :data="wayWeDoBusiness" />
             </div>
         </div>
     </section>
@@ -63,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <Slider v-else="clients.length > 0" :items="clients" />
+                <Slider v-else :items="clients" />
             </div>
         </div>
     </section>
@@ -83,29 +84,15 @@ export default {
     },
     data() {
         return {
-            data: [
-                {
-                    image: "/assets/images/procure.png",
-                    title: "Procure",
-                    description: "We obtain the most suitable goods or services to fulfil your business needs"
-                },
-                {
-                    image: "/assets/images/transact.png",
-                    title: "Transact",
-                    description: "We seal the deal referring to your purchase order"
-                },
-                {
-                    image: "/assets/images/deliver.png",
-                    title: "Deliver",
-                    description: "We dispatch the products to your business-designated address"
-                }
-            ],
+            wayWeDoBusiness: [],
             clients: [],
-            loaderClients: false
+            loaderClients: false,
+            loaderBusiness: false
         }
     },
     mounted() {
         this.getClients();
+        this.getBusiness();
     },
     methods: {
         async getClients() {
@@ -117,6 +104,16 @@ export default {
                 console.log(err);
             }
             this.loaderClients = false;
+        },
+        async getBusiness() {
+            this.loaderBusiness = true;
+            try {
+                const res = await axios.get('/api/way-we-do-business/getAll');
+                this.wayWeDoBusiness = res.data.data;
+            }catch(err) {
+                console.log(err);
+            }
+            this.loaderBusiness = false;
         }
     }
 };

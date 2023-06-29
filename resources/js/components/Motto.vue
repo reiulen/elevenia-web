@@ -95,54 +95,16 @@
       </div>
     </div>
     <div class="col-md-6" v-if="this.motto == 'Value'">
-      <div>
-        <b>Elevenian, let’s</b>
-        <span class="text-p-red"><b>ENGAGE!</b></span> <br/>
-        <span
-          >We are constantly <b>det</b
-          ><b className="text-p-red">E</b>rmined </span
-        ><br />
-        <span
-          >upholding <b>i</b><b className="text-p-red">N</b>teGrity in
-          performing duties and</span
-        ><br />
-        <span
-          >promoting <b>te</b><b className="text-p-red">A</b>mwork when
-          collaborating to</span
-        ><br />
-        <span
-          >generate <b>breakthrou</b><b className="text-p-red">G</b>h solutions
-          and establish</span
-        ><br />
-        <span
-          >operational <b>exc</b><b className="text-p-red">E</b>llence solutions
-          and establish</span
-        ><br />
-      </div>
+      <div v-html="$root.setting['value_about_us']"></div>
     </div>
     <div class="col-md-6" v-if="this.motto == 'Mission'">
       <div class="col-md-8">
-        <ol>
-          <li>
-            Orchestrate the supply and demand by exploring the resources and
-            maximizing the value added.
-          </li>
-          <li>
-            Build the inclusive trading ecosystem for Indonesian commodities in
-            the local and global markets to grow and strengthen the nation’s
-            economy.
-          </li>
-          <li>
-            Provide a solution for corporations by establishing an effective
-            &amp; transparent procurement process.
-          </li>
-        </ol>
+        <div v-html="$root.setting['misi_about_us']"></div>
       </div>
     </div>
     <div class="col-md-6" v-if="this.motto == 'Vision'">
       <div class="col-md-8">
-        To lead the Indonesian trading ecosystem by providing excellent business
-        solutions for local and global markets
+        <div v-html="$root.setting['visi_about_us']"></div>
       </div>
     </div>
   </div>

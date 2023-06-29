@@ -1,16 +1,15 @@
 <template class="bg-p-white">
     <section class="hero" style="margin-top: 25px !important;">
         <div class="image-hero position-relative">
-            <img src="/assets/images/bg-news.png" style="width: 100%;" />
+            <img :src="`/${$root.setting['image_header_news']}`" style="width: 100%;" />
             <div>
                 <div class="position-absolute text-white font-weight-500 font-size-xl-30 font-size-md-28 font-size-md-18 font-size-sm-18 font-size-10"
-                    style="
-            top: 50%;
-            right: 16%;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          ">
-                    Our <span class="font-size-xl-45">Activity</span> in <span class="font-size-xl-45">Elevenia</span>
-                </div>
+                v-html="$root.setting['quote_news']"
+                style="
+                    top: 50%;
+                    right: 16%;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                "></div>
             </div>
         </div>
     </section>

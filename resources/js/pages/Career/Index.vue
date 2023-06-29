@@ -1,16 +1,15 @@
 <template>
     <section class="hero">
         <div class="image-hero position-relative">
-            <img src="/assets/images/career-hero.png" style="width: 100%;" />
+            <img :src="`/${$root.setting['image_header_career']}`" style="width: 100%;" />
             <div>
                 <div class="position-absolute text-white font-weight-500 font-size-xl-30 font-size-md-28 font-size-md-18 font-size-sm-18 font-size-10"
+                    v-html="$root.setting['quote_career']"
                     style="
-            top: 50%;
-            left: 5%;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          ">
-                    Grow your future
-                    <span class="font-size-xl-45">CAREER</span> with us!
+                        top: 50%;
+                        left: 5%;
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    ">
                 </div>
             </div>
         </div>

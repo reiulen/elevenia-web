@@ -14,7 +14,7 @@
                 role="menu" data-accordion="false">
                 <li class="nav-header text-bold mb-2">Dashboard</li>
                 <li
-                    class="nav-item nav-item {{ set_menu_open(['news.index', 'news.create', 'news.edit', 'career.index', 'partner.index', 'client.index', 'sejarah.index', 'our-team.index']) }}">
+                    class="nav-item nav-item {{ set_menu_open(['news.index', 'news.create', 'news.edit', 'career.index', 'partner.index', 'client.index', 'sejarah.index', 'our-team.index', 'product-service.index', 'way-we-do-business.index', 'setting.index', 'message.index']) }}">
                     <a href="#" class="nav-link bg-white " style="border-radius: 8px">
                         <p>
                             {{ __('ESPN') }}
@@ -58,6 +58,44 @@
                                 <p>{{ __('Our Team') }}</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('product-service.index') }}" class="nav-link {{ set_active_sub(['product-service.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Product Service') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('way-we-do-business.index') }}" class="nav-link {{ set_active_sub(['way-we-do-business.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Way We Do Business') }}</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('message.index') }}" class="nav-link {{ set_active_sub(['message.index']) }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>{{ __('Message') }}</p>
+                            </a>
+                        </li>
+                        <ul class="nav nav-pills nav-sidebar nav-child-indent" data-widget="treeview"
+                                role="menu" data-accordion="false">
+                            <li
+                                class="nav-item nav-item {{ set_menu_open(['setting.index']) }}">
+                                <a href="#" class="nav-link " style="border-radius: 8px">
+                                    <p>
+                                        {{ __('Setting') }}
+                                        <i class="fas fa-angle-left right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ route('setting.index') }}" class="nav-link {{ set_active_sub(['setting.index']) }}">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>{{ __('Default') }}</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </ul>
                 </li>
             </ul>

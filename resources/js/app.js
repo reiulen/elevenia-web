@@ -15,6 +15,9 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
-createApp(App)
+
+const app = createApp(App)
   .use(router)
   .mount('#app');
+
+app.globalProps = []

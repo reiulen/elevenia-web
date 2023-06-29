@@ -6,8 +6,13 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\TextEditorController;
 use App\Http\Controllers\ClientPartnerController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\OurTeamController;
+use App\Http\Controllers\ProductDescriptionController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\WayWeDoBusinessController;
+use App\Models\ContactUsMessage;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +61,21 @@ if(explode('/', Request::path())[0] == config('fortify.prefix')) {
 
             Route::resource('/our-team', OurTeamController::class);
             Route::post('our-team/dataTable', [OurTeamController::class, 'dataTable'])->name('ourTeam.dataTable');
+
+            Route::resource('/product-service', ProductDescriptionController::class);
+            Route::post('product-service/dataTable', [ProductDescriptionController::class, 'dataTable'])->name('productDescription.dataTable');
+            Route::post('product-service/productDataTable', [ProductDescriptionController::class, 'productDataTable'])->name('productDescription.productDataTable');
+            Route::post('product-service/productDetail/store', [ProductDescriptionController::class, 'storeProductDetail'])->name('productDescription.productDetail');
+            Route::get('product-service/productDetail/{id}', [ProductDescriptionController::class, 'productDetail'])->name('productDescription.productDetail');
+            Route::delete('product-service/productDetail/{id}', [ProductDescriptionController::class, 'productDetailDelete'])->name('productDescription.productDetail');
+
+            Route::resource('/way-we-do-business', WayWeDoBusinessController::class);
+            Route::post('way-we-do-business/dataTable', [WayWeDoBusinessController::class, 'dataTable'])->name('productDescription.dataTable');
+
+            Route::resource('/setting', SettingController::class);
+
+            Route::get('message', [ContactUsController::class, 'index'])->name('message.index');
+            Route::post('message/dataTable', [ContactUsController::class, 'dataTable'])->name('message.dataTable');
 
         });
     });
