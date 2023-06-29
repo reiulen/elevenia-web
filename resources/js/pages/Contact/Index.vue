@@ -52,7 +52,7 @@
               </div>
               <div class="pt-4">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.456943154548!2d106.81749127478994!3d-6.203294893784474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5f1425fe9e1%3A0x81dd87c5b9333c76!2sPT.%20XL%20Planet!5e0!3m2!1sid!2sid!4v1686239487692!5m2!1sid!2sid"
+                  :src="$root.setting['link_maps_contact_us']"
                   width="100%"
                   height="450"
                   style="border: 0; border-radius: 1rem;"
