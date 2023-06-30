@@ -1,6 +1,6 @@
 <template>
     <div class="container px-4">
-        <swiper v-if="data.length > 0" class="mySwiper">
+        <swiper v-if="data.length > 0" class="mySwiper" :autoplay="2000">
             <swiper-slide v-for="(itemClient, index) in dataClientPartner">
                 <div class="row align-items-center justify-content-center" :key="index">
                     <div class="col-md-2 col-4 gy-4" v-for="(item, index) in itemClient" :key="item.id">
