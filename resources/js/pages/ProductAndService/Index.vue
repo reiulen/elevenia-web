@@ -72,13 +72,13 @@ import axios from 'axios';
                                 Product in catalogue
                             </div>
                             <template v-if="item.detail_product.length > 0">
-                                <div class="row justify-content-center align-items-center">
-                                    <div v-for="(detail, indexDetail) in item.detail_product" class="col-4"
+                                <div class="row justify-content-center align-items-center g-4">
+                                    <div v-for="(detail, indexDetail) in item.detail_product" class="col-lg-4 col-sm-6"
                                         :key="indexDetail">
-                                        <div class="card border-2 border-black radius-2 hover-shadow-lg">
-                                            <div class="card-body text-center">
+                                        <div class="card border-2 border-black radius-2 hover-shadow-lg" style="min-height: 265px;">
+                                            <div class="card-body text-center p-4 vstack justify-content-between">
                                                 <div>
-                                                    <img :src="detail.image" class="img-fluid" alt="" style="height: 220px;" />
+                                                    <img :src="`/${detail.image}`" class="img-fluid" alt="" style="height: 160px;" />
                                                 </div>
                                                 <div class="font-size-14 font-weight-700 text-center">
                                                     {{ detail.name }}
