@@ -77,7 +77,9 @@ import axios from 'axios';
                                         :key="indexDetail">
                                         <div class="card border-2 border-black radius-2 hover-shadow-lg">
                                             <div class="card-body text-center">
-                                                <img :src="detail.image" class="img-fluid" alt="" />
+                                                <div>
+                                                    <img :src="detail.image" class="img-fluid" alt="" style="height: 220px;" />
+                                                </div>
                                                 <div class="font-size-14 font-weight-700 text-center">
                                                     {{ detail.name }}
                                                 </div>
