@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendMessageContactEmail;
 use Illuminate\Http\Request;
 use App\Models\ContactUsMessage;
+use Illuminate\Support\Facades\Mail;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Validator;
 
@@ -25,10 +27,13 @@ class ContactUsController extends Controller
                 'message' => $validator->errors(),
             ], 400);
         }
+
         // $data['message'] = $data['message'] . "\n\n" . $data['name'] . "\n" . $data['email'] . "\n" . $data['phone'];
         // $data['subject'] = 'Contact Us';
         // $data['email'] = '';
-        $data = ContactUsMessage::create($input);
+        // $data = ContactUsMessage::create($input);
+
+        Mail::to(env('MAIL_TO'))->send(new SendMessageContactEmail($input));
 
         return response()->json([
             'status' => true,

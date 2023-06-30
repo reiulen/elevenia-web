@@ -130,8 +130,8 @@
                     </div>
 
                     <div class="text-center">
-                        <button class="font-size-14 font-weight-700 text-center btn btn-p-orange-11 py-3 mt-3 radius-20 w-50">
-                          Send
+                        <button :disabled="loaderSubmit ? true : false" class="font-size-14 font-weight-700 text-center btn btn-p-orange-11 py-3 mt-3 radius-20 w-50">
+                          {{ loaderSubmit ? 'Loading...' : 'Send Message' }}
                         </button>
                     </div>
                   </form>
@@ -160,6 +160,7 @@ export default {
             message: "",
         },
         validationErrors: {},
+        loaderSubmit: false,
     };
   },
   mounted() {
@@ -176,6 +177,7 @@ export default {
             });
             return;
         }
+        this.loaderSubmit = true;
         try {
             const res = await axios.post('/api/contact-us', this.form);
             Swal.fire({
@@ -194,6 +196,7 @@ export default {
             if(e.response.status === 400)
                 this.validationErrors = e.response.data.message;
         }
+        this.loaderSubmit = false;
     }
   },
 };
