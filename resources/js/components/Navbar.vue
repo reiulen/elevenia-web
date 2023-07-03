@@ -24,8 +24,18 @@
                 <b-collapse id="navBarCollapse" is-nav>
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li v-for="item in navbar" class="nav-item">
-                            <router-link :class="`nav-link ${item.link == currentUrl ? 'active' : ''}`" :to="item.link">{{
-                                item.name }}</router-link>
+                            <router-link :class="`nav-link ${item.link == currentUrl ? 'active' : ''}`" :to="item.link">
+                                {{ item.name }}
+                            </router-link>
+                            <div v-if="item.subMenu" class="position-absolute bg-white shadow-md radius-7 overflow-hidden nav-submenu" style="min-width: 60px;">
+                                <ul class="submenu-nav">
+                                    <li v-for="subItem in item.subMenu" class="item-menu">
+                                        <a :href="subItem.link" target="_blank">
+                                            <img :src="subItem.image" alt="logo" :style="`width: ${subItem.width}; height: ${subItem.height};`" />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="nav-item d-md-none pt-0">
                             <div class="nav-link px-3 pb-3 pt-0">
@@ -83,7 +93,23 @@ export default {
                 },
                 {
                     name: 'Product & Services',
-                    link: '/product-service'
+                    link: '/product-service',
+                    subMenu: [
+                        {
+                            name: 'Enusa',
+                            image: '/assets/images/elevenia-biz-yellow.png',
+                            link: '/product',
+                            height: '70px',
+                            width: '190px'
+                        },
+                        {
+                            name: 'Services',
+                            image: '/assets/images/bg-enusantara.png',
+                            link: '/service',
+                            height: '40px',
+                            width: '210px'
+                        }
+                    ]
                 },
                 {
                     name: 'News',

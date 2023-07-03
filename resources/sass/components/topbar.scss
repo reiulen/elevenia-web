@@ -37,6 +37,12 @@ $header-height-mobile : 54px;
         ul {
             gap: 60px;
             li {
+                &:hover {
+                    .nav-submenu {
+                        display: block;
+                    }
+                }
+
                 a {
                     padding: 0 10px;
                     line-height: 50px;
@@ -62,6 +68,32 @@ $header-height-mobile : 54px;
 
                     &.router-link-exact-active {
                         color: #5533FF;
+                    }
+                }
+
+                .dropdown-menu {
+                    display: block !important;
+                }
+
+                .nav-submenu {
+                    display: none;
+                }
+
+                .submenu-nav {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 !important;
+                    gap: 0;
+                    li {
+                        text-align: center;
+                        padding: 15px;
+                        list-style: none;
+                        &:not(:last-child) {
+                            border-bottom: 1px solid #E5E5E5;
+                        }
+                        &:hover {
+                            background: #F5F5F5;
+                        }
                     }
                 }
             }
