@@ -8,9 +8,7 @@
         border-radius: 100rem;
         width: 20%;
         border: 1rem solid #363635;
-        position: relative;
-        transition: 0.7s all ease;
-      "
+        position: relative;"
         :style="styleParent"
     >
       <div
@@ -140,13 +138,13 @@ export default {
                 this.styleVision = "transform: rotate(202deg)";
                 this.styleMission = "transform: rotate(200deg)";
                 this.styleValue = "transform: rotate(200deg)";
-                this.styleParent = "transform: rotate(160deg)";
+                this.styleParent = "transform: rotate(160deg); transition: 1s all ease;";
             }else {
                 this.classname = "row justify-content-md-end justify-content-center align-items-center gap-5";
                 this.styleVision = "transform: rotate(290deg)";
                 this.styleMission = "transform: rotate(291deg)";
                 this.styleValue = "transform: rotate(294deg)";
-                this.styleParent = "transform: rotate(70deg)";
+                this.styleParent = "transform: rotate(70deg); transition: 1s all ease;";
             }
             break;
             case "Mission":
@@ -155,13 +153,13 @@ export default {
                 this.styleVision = "transform: rotate(90deg)";
                 this.styleMission = "transform: rotate(90deg)";
                 this.styleValue = "transform: rotate(90deg)";
-                this.styleParent = "transform: rotate(269deg)";
+                this.styleParent = "transform: rotate(269deg); transition: 0.8s all fade-out;";
             }else {
                 this.classname = "row justify-content-md-end justify-content-center align-items-center gap-5";
                 this.styleVision = "transform: rotate(192deg)";
                 this.styleMission = "transform: rotate(189deg)";
                 this.styleValue = "transform: rotate(189deg)";
-                this.styleParent = "transform: rotate(170deg)";
+                this.styleParent = "transform: rotate(170deg); transition: 0.8s all fade-out;";
             }
             break
             case "Value" :
@@ -170,13 +168,13 @@ export default {
                 this.styleVision = "transform: rotate(329deg)";
                 this.styleMission = "transform: rotate(326deg)";
                 this.styleValue = "transform: rotate(330deg)";
-                this.styleParent = "transform: rotate(32deg)";
+                this.styleParent = "transform: rotate(32deg); transition: 1.5s all fade-out;";
             }else {
                 this.classname = "row justify-content-md-end justify-content-center align-items-center gap-5";
                 this.styleVision = "transform: rotate(57deg)";
                 this.styleMission = "transform: rotate(58deg)";
                 this.styleValue = "transform: rotate(54deg)";
-                this.styleParent = "transform: rotate(304deg)";
+                this.styleParent = "transform: rotate(304deg); transition: 1.5s all fade-out;";
             }
             break
         }

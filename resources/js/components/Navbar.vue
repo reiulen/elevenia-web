@@ -99,15 +99,15 @@ export default {
                             name: 'Enusa',
                             image: '/assets/images/elevenia-biz-yellow.png',
                             link: '/product',
-                            height: '70px',
-                            width: '190px'
+                            height: '50px',
+                            width: '120px'
                         },
                         {
                             name: 'Services',
                             image: '/assets/images/bg-enusantara.png',
                             link: '/service',
-                            height: '40px',
-                            width: '210px'
+                            height: '25px',
+                            width: '120px'
                         }
                     ]
                 },
