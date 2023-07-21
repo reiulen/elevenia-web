@@ -4,25 +4,44 @@
             <div class="row align-items-center px-4 gx-lg-4 g-md-5 gy-5">
                 <div class="col-lg-4 col-md-6 order-lg-0 order-1">
                     <div class="hstack align-items-center flex-wrap gap-3 pe-5">
-                        <router-link to="/" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        <table>
+                        <tr>
+                        <router-link to="/" class="navbar-contact font-weight-400 font-size-12 text-decoration-none text-dark">
                             Home
                         </router-link>
-                        <router-link to="/about-us" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        </tr>
+
+                        <tr>
+                        <router-link to="/about-us" class="navbar-contact font-weight-400 font-size-12 text-decoration-none text-dark">
                             About Us
                         </router-link>
-                        <router-link to="/product-service" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        </tr>
+
+                        <tr>
+                        <router-link to="/product-service" class="navbar-contact font-weight-400 font-size-12 text-decoration-none text-dark">
                             Product & Service
                         </router-link>
-                        <router-link to="/news" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        </tr>
+
+                        <tr>
+                        <router-link to="/news" class="navbar-contact font-weight-400 font-size-12 text-decoration-none text-dark">
                             News
                         </router-link>
-                        <router-link to="/career" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        </tr>
+
+                        <tr>
+                        <router-link to="/career" class="navbar-contact font-weight-400 font-size-12 text-decoration-none text-dark">
                             Career
                         </router-link>
-                        <router-link to="/contact-us" class="font-weight-700 font-size-16 text-decoration-none text-dark">
+                        </tr>
+
+                        <tr>
+                        <router-link to="/contact-us" class="navbar-contact font-weight-400 font-size-12 text-decoration-none text-dark">
                             Contact Us
                         </router-link>
-                    </div>
+                        </tr>
+                    </table>
+                </div>
                 </div>
                 <div class="col-lg-4 col-md-6 order-0 orderlg-1">
                     <div class="text-center">
